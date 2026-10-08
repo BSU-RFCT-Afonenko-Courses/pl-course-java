@@ -1,0 +1,19 @@
+{
+  "uuid": "f707cbf3-e784-5990-a592-999f7d9bb746",
+  "type": "v3",
+  "title": "exr-pl-java25-unicode-slice",
+  "topic": "Java",
+  "gradingMethod": "External",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "externalGradingOptions": {
+    "image": "ghcr.io/afonenko-course-tools/java25-grader:pilot-local-20261008-r2",
+    "entrypoint": [
+      "python3",
+      "/grader/grade.py"
+    ],
+    "timeout": 30,
+    "enableNetworking": false
+  }
+}
