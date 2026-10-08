@@ -8,8 +8,11 @@ Generated from [Java](https://github.com/BSU-RFCT-Afonenko-Courses/Java) source
 The pilot uses one standard native Java code editor and the actual JDK25 grader.
 The full local author project is in the source repository; download/upload
 controls, README, Examples and .gitignore are absent from this native question.
-Private grading tests are included for this public demonstration; the reference
-solution is not published. Do not edit generated course files manually.
+The server-side tests are non-confidential demonstration fixtures already in
+the public Java source commit, copied byte-for-byte. They check the published
+Unicode contract (17 fixed string/boundary cases). No exam bank, identities,
+submissions, credentials or runtime data is included. The reference solution
+is not published. Do not edit generated course files manually.
 
 The PL exporter is pinned to owner candidate11a6c73 (PR11), installed as a whole
 package. The minor release is not yet published. Enrollment/publishing and
