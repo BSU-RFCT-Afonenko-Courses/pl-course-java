@@ -1,0 +1,26 @@
+{
+  "course": "java-portal",
+  "questions": [
+    "java-portal/exr-pl-java25-unicode-slice"
+  ],
+  "release": "native",
+  "works": [
+    {
+      "assignments": {
+        "java-portal/exr-pl-java25-unicode-slice": {
+          "requirement": "required",
+          "workMode": "individual"
+        }
+      },
+      "id": "sec-pl-java25-pilot",
+      "items": [
+        "java-portal/exr-pl-java25-unicode-slice"
+      ],
+      "key": "java-portal/sec-pl-java25-pilot",
+      "kind": "test",
+      "owner": "java-portal",
+      "source": "prairielearn-pilot/index.qmd",
+      "title": "Пилот самостоятельной сдачи Java 25"
+    }
+  ]
+}

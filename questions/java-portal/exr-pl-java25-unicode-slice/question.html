@@ -1,0 +1,38 @@
+<pl-question-panel>
+<p><span class="theorem-title"><strong>Упражнение 2 (Диапазон кодовых
+точек Unicode)</strong></span>  </p>
+<div class="course-metadata">
+<span class="course-meta course-meta-role">Контроль</span> <span
+class="course-meta course-meta-difficulty">Начальный</span> <span
+class="course-meta course-meta-time">35 мин</span>
+</div>
+<p>Реализуйте
+<code>public static String slice(String text, int from, int to)</code> в
+классе <code>UnicodeSlice</code>. Метод возвращает кодовые точки строки
+<code>text</code> с позиции <code>from</code> включительно до позиции
+<code>to</code> исключительно. Позиции отсчитываются от нуля по кодовым
+точкам, а не кодовым единицам UTF-16.</p>
+<p>Допустимо ровно
+<code>0 &lt;= from &lt;= to &lt;= число кодовых точек</code>. Для
+недопустимых границ выбрасывайте <code>IndexOutOfBoundsException</code>;
+для <code>null</code> — <code>NullPointerException</code>. Пустой
+диапазон возвращает пустую строку; полный диапазон сохраняет содержимое
+исходной строки. Входная непустая строка содержит корректный UTF-16 без
+непарных суррогатов. Графемная сегментация и идентичность объекта
+результата не проверяются.</p>
+<p>Для строки <code>"A😀Б"</code> диапазон <code>[1, 2)</code> должен
+дать <code>"😀"</code>. Допускается разделить графемный кластер: единица
+задачи — кодовая точка. Разрешено использовать стандартную библиотеку
+JDK 25. Допишите метод в поле кода PrairieLearn, сохранив класс
+<code>UnicodeSlice</code> и сигнатуру метода.</p>
+
+<pl-file-editor file-name="UnicodeSlice.java" ace-mode="ace/mode/java" normalize-to-ascii="false">public final class UnicodeSlice {
+    private UnicodeSlice() {}
+
+    public static String slice(String text, int from, int to) {
+        throw new UnsupportedOperationException(&quot;Реализуйте диапазон кодовых точек [from, to)&quot;);
+    }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>
