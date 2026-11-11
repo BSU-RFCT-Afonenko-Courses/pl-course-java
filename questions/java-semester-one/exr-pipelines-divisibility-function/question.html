@@ -1,0 +1,45 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Начальный</p>
+<p>Определите собственный функциональный интерфейс: его единственный
+абстрактный метод принимает <code>int</code> и возвращает
+<code>boolean</code>. Реализуйте интерфейс лямбда-выражением, которое
+проверяет делимость аргумента на 31 без остатка. Имена интерфейса и
+метода выберите самостоятельно.</p>
+<p>Допустим весь диапазон <code>int</code>, включая отрицательные числа
+и ноль. Для <code>0</code>, <code>31</code>, <code>-31</code> результат
+<code>true</code>, для <code>32</code> — <code>false</code>.
+Продемонстрируйте вызов метода через переменную вашего интерфейса.</p>
+<p>Предъявите исходник интерфейса и лямбды, покажите результаты для
+положительного, отрицательного аргумента и нуля. Объясните, какой метод
+вызывается через переменную интерфейса.</p>
+<h4
+id="pl-3e599e40-f365-5446-a553-a9bc8179b313-вход-для-воспроизводимой-проверки">Вход
+для воспроизводимой проверки</h4>
+<p>Обязательные объявления входа заданы в стартере; сохраните их и
+свяжите со своим решением. Собственные классы, видимость,
+вспомогательные методы и алгоритмы выбирайте в пределах условия. Если
+предметный API уже обеспечивает этот вход, дополнительный класс не
+требуется.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p>Метод вызывают через переменную собственного функционального
+интерфейса: для аргумента <code>31</code> он возвращает
+<code>true</code>, для <code>32</code> — <code>false</code>.</p>
+<p>Тот же метод для <code>0</code> и <code>-31</code> возвращает
+<code>true</code> в обоих случаях.</p>
+</section>
+<p>Единственный файл решения — <code>Study.java</code>, без объявления
+пакета. Решение, вспомогательные классы и методы размещайте в нём.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;import java.util.function.*;import java.nio.file.Path;
+/** Связь с собственным решением; модель и алгоритм создайте самостоятельно. */
+public class Study {
+    /** Создайте и верните фактическую лямбду своего SAM(int)-&gt;boolean. Сам интерфейс спроектируйте самостоятельно. */
+    public static Object function() { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Только вызовите переданную лямбду через собственный функциональный интерфейс. */
+    public static boolean apply(Object function,int value) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

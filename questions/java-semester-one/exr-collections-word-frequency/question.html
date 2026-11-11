@@ -1,0 +1,49 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Для готовой строки, отличной от <code>null</code>, подсчитайте
+частоту каждого английского слова с помощью <code>HashMap</code>. Слово
+— максимальная непустая последовательность букв
+<code>A</code>–<code>Z</code> и <code>a</code>–<code>z</code>; любой
+другой символ разделяет слова. Регистр значим. Исходная строка
+сохраняется; результат содержит все встреченные слова с положительным
+числом их вхождений. Порядок перечисления пар свободен.</p>
+<p>Для <code>Java java, code! Code code</code> частоты равны
+<code>Java → 1</code>, <code>java → 1</code>, <code>code → 2</code>,
+<code>Code → 1</code>. Пустая строка и строка без английских букв дают
+пустую карту. Способ выделения слов и формат предъявления пар выберите
+самостоятельно.</p>
+<p>Предъявите исходник и карту частот. Объясните границы слова,
+сохранение регистра и обновление счётчика в HashMap; покажите строку без
+английских букв.</p>
+<h4
+id="pl-3d927559-fe9b-5b8c-9445-bd9428bfbf25-вход-для-проверки-2">Вход
+для проверки</h4>
+<p>Вход стартера возвращает наблюдаемую карту частот. Слова —
+максимальные последовательности A–Z/a–z; регистр значим. Использование
+HashMap в решении сохраняется, а порядок перечисления пар свободен.
+Сигнатуры входа из стартера обязательны.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>Повторы и значимый регистр.</strong> Для строки
+<code>Java java, code! Code code</code> частоты равны
+<code>{Java: 1, java: 1, code: 2, Code: 1}</code>. Порядок перечисления
+пар свободен.</p>
+<p><strong>Нет английских букв.</strong> Для строки
+<code>123 — абв!</code> получается пустая карта частот.</p>
+</section>
+<p>Сдайте <code>Study.java</code> без объявления пакета, сохранив
+объявления входа из стартера.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;
+/** Входы к вашему решению. Реализуйте модель и алгоритм по условию.
+ * Вспомогательные типы, видимость и наследование допустимы внутри фиксированного комплекта; сохраняйте заданные пути и package. Не заменяйте
+ * настоящую модель отдельным снимком и не скрывайте мутацию копированием во входе.
+ * Законные копии, вычисляемые самим алгоритмом по условию, разрешены. */
+public class Study {
+    /** TODO: Вход стартера возвращает наблюдаемую карту частот. */
+    public static Map&lt;String,Integer&gt; frequencies(String text) { throw new UnsupportedOperationException(&quot;TODO: реализуйте решение&quot;); }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

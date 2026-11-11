@@ -1,0 +1,194 @@
+{
+  "uuid": "864cfffa-5e75-5872-9bb7-9c378b6e7fdd",
+  "type": "Homework",
+  "title": "Ресурсы и файлы",
+  "set": "Homework",
+  "number": "10",
+  "maxPoints": 90,
+  "text": "<p>Закройте файловые ресурсы при успехе и отказе, сохраните текст при\nбайтовом и символьном копировании, завершите приложение с проверкой\nвсего входа до вывода отчёта.</p>\n<p>Теория: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/exceptions.html#sec-theory-exceptions\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 21</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/resources.html#sec-theory-resources\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 22</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/io.html#sec-theory-io\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 23</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/application.html#sec-theory-application-behavior\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Наблюдаемое поведение\nприложения</a>. Справка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/files.html#sec-api-files-operations\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Чтение и запись</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/project.html#sec-api-project-wrapper\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Подготовка и сборка\nGradle</a>. Введение: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/practice/files.html#/sec-practice-files\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Ресурсы и файлы</a>. До работы\nподготовьте JDK 25 и предоставленную сборку проекта.</p>\n<h2\nid=\"pl-35133704-5a8e-56da-bf4b-ae4e0be15a16-предъявление-и-объяснение\">Предъявление\nи объяснение</h2>\n<p>Для копирования предъявите обычный и пустой вход, сохранение\nтабуляций и разделителей строк, отсутствие входа при прежнем выходе и\nотказ самокопирования. Байтовая версия требует явного\n<code>close()</code> каждого открытого ресурса; символьная —\n<code>Reader</code>/<code>Writer</code> с UTF-8 и <code>try</code> с\nресурсами. Допустимо читать по одному значению или порциями в буфер.\nИмена вспомогательных методов и способ обхода выбираете\nсамостоятельно.</p>\n<p>В <code>gradeapp</code> предоставлены модель, исключение, сборка,\nвнешняя команда и печать. Самостоятельно реализуйте парсер, загрузчик,\nдва метода отчёта и <code>Main.run(Path,int)</code> по опубликованному\nдоговору заготовки. Цикл с сортировкой и Stream допустимы. Покажите\nпоздний повтор кода, неверную строку после пробельной и запуск JAR из\nдругого каталога. Объясните, почему уникальность проверяет загрузчик,\nкак сохраняется исходный список и когда начинается вывод отчёта в\nstdout.</p>\n<p>Представьте исходные Java-файлы, входные данные и короткую\nдемонстрацию обычных и граничных случаев. Обязательная техника\nпроверяется по исходнику, объяснение — в беседе с преподавателем.</p>\n<h2 id=\"pl-35133704-5a8e-56da-bf4b-ae4e0be15a16-условия-задач\">Условия\nзадач</h2>\n<p>Полные условия и общие правила находятся в темах банка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/exceptions.html#sec-bank-exceptions\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Исключения</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/files.html#sec-bank-files\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Работа с файлами</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/projects.html#sec-bank-projects\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Учебные приложения</a>.</p>\n<div\nid=\"pl-35133704-5a8e-56da-bf4b-ae4e0be15a16-3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9\"\nclass=\"hidden\">\n\n</div>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Ресурсы и файлы",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-exceptions-exception-flow-errors",
+          "autoPoints": 0,
+          "manualPoints": 10,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-byte-file-copy",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-character-file-copy",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-gradeapp-report",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-compare-files",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-sort-file-numbers",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-matching-line-numbers",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-poem-word-frequency",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-exceptions-locale-number-errors",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Добровольные задания",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-files-transpose-file-matrix",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-phone-owner-records",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-poem-letter-word-frequency",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-final-line-words",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-remove-short-words",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-disk-help-menu",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-files-remove-java-comments",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-projects-airline-persistence-project",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        }
+      ]
+    }
+  ]
+}

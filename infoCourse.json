@@ -1,0 +1,16 @@
+{
+  "uuid": "036dee22-0705-5c6d-abd5-30620afcce9b",
+  "name": "Java",
+  "title": "Программирование на Java",
+  "timezone": "Europe/Minsk",
+  "topics": [
+    {
+      "name": "Java",
+      "color": "blue2",
+      "description": "Программирование на Java 25"
+    }
+  ],
+  "options": {
+    "integerManualPoints": true
+  }
+}

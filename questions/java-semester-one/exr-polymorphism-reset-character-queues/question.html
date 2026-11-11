@@ -1,0 +1,70 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Высокий</p>
+<p>Это один из двух вариантов обязательного выбора: выполните эту задачу
+либо «Перенос между очередями разных типов».</p>
+<p>Используйте полный <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/polymorphism.html#sec-bank-character-queues"
+target="_blank" rel="noopener noreferrer">Очереди символов</a>. Каждая
+задача самостоятельна: создайте три реализации по этому договору либо
+используйте собственные ранее написанные реализации.</p>
+<p>Добавьте в <code>ICharQ</code> метод <code>void reset()</code> и
+реализуйте его в <code>FixedQueue</code>, <code>CircularQueue</code>,
+<code>DynQueue</code>. После сброса очередь пуста, индексы вернулись в
+начальное состояние, текущая ёмкость сохранена, включая уже увеличенную
+ёмкость <code>DynQueue</code>. Сброс пустой очереди допустим, ничего не
+печатает и оставляет её пустой. После сброса старые символы больше не
+извлекаются.</p>
+<p>Предъявите исходники и консольную демонстрацию общего клиента через
+ссылки <code>ICharQ</code> для всех трёх реализаций: заполнение,
+частичное извлечение, сброс, повторное помещение и сброс пустой очереди.
+Для <code>DynQueue</code> сначала добейтесь роста и объясните по
+исходнику, почему сброс сохраняет текущую ёмкость.</p>
+<p>Объясните различия повторного использования места у трёх реализаций,
+почему клиент может принять новую реализацию без новой ветви
+<code>instanceof</code> и почему для <code>DynQueue</code> не требуется
+отказ переполнения. Вспомогательные поля, методы и способ запуска
+свободны в пределах общего договора. Требуются интерфейсный клиент и
+закрытое массивное FIFO-хранение.</p>
+<p><a
+href="{{options.client_files_question_url}}/test-support/shared/d086641fede1/character-queues.md"
+target="_blank" rel="noopener noreferrer">Очереди символов</a></p>
+<h4
+id="pl-a2c390c4-29e9-558f-a29b-fb742dc88ff4-вход-для-воспроизводимой-проверки-3">Вход
+для воспроизводимой проверки</h4>
+<p>Обязательные объявления входа заданы в стартере; сохраните их и
+свяжите со своим решением. Собственные классы, видимость,
+вспомогательные методы и алгоритмы выбирайте в пределах условия. Если
+предметный API уже обеспечивает этот вход, дополнительный класс не
+требуется.</p>
+<p>Через файловый диалог сдайте файлы <code>CircularQueue.java</code>,
+<code>DynQueue.java</code>, <code>FixedQueue.java</code> и
+<code>ICharQ.java</code> из <code>src/main/java</code> стартового
+проекта. Во всех файлах пакет не объявляйте. Вспомогательные классы и
+методы можно определить в этих файлах; демонстрацию можно разместить в
+одном из них, без дополнительного исходника.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>Сброс после частичного извлечения.</strong> Для каждой из
+<code>FixedQueue(2)</code>, <code>CircularQueue(2)</code>,
+<code>DynQueue(2)</code> поместите <code>A</code>, <code>B</code>,
+извлеките <code>A</code>, выполните <code>reset()</code>, затем
+поместите <code>X</code>, <code>Y</code>. Два извлечения дают
+<code>X</code>, <code>Y</code>; старый <code>B</code> удалён. Успешные
+операции молчат. Сохранение текущей ёмкости проверяется отдельно по
+исходнику.</p>
+<p><strong>Пустая и уже выросшая очередь.</strong>
+<code>FixedQueue(1)</code> и <code>CircularQueue(1)</code> изначально
+пусты, а <code>DynQueue(1)</code> содержит <code>A</code>,
+<code>B</code>, <code>C</code>. Выполните сброс каждой очереди и
+повторный пустой сброс динамической, затем поместите <code>X</code> и
+дважды извлеките. Каждая очередь возвращает <code>X</code>, затем
+<code>\0</code> и печатает «Очередь пуста» при пустом извлечении. Пустые
+сбросы молчат. Сохранение выросшей ёмкости <code>DynQueue</code>, не
+меньшей <code>3</code>, предъявляется отдельно по исходнику.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+
+<pl-file-upload file-names="CircularQueue.java,DynQueue.java,FixedQueue.java,ICharQ.java"></pl-file-upload>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

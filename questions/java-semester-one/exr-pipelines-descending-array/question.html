@@ -1,0 +1,39 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Начальный</p>
+<p>Отсортируйте переданный <code>Integer[]</code> по убыванию числовых
+значений, используя лямбда-компаратор. Массив и его элементы ненулевые;
+допустим весь диапазон <code>int</code>, пустой массив и повторы.</p>
+<p>Результат записывается в исходный массив. Все элементы и число их
+повторений сохраняются. Для <code>{2, -1, 2, 0}</code> результат
+<code>{2, 2, 0, -1}</code>. Проверьте также крайние значения
+<code>Integer.MIN_VALUE</code> и <code>Integer.MAX_VALUE</code>.</p>
+<p>Предъявите массив до и после сортировки. Объясните сравнение крайних
+значений int и сохранение повторов.</p>
+<h4
+id="pl-b4bbf421-4900-52c8-b06d-555fe2fabe97-вход-для-воспроизводимой-проверки-9">Вход
+для воспроизводимой проверки</h4>
+<p>Обязательные объявления входа заданы в стартере; сохраните их и
+свяжите со своим решением. Собственные классы, видимость,
+вспомогательные методы и алгоритмы выбирайте в пределах условия. Если
+предметный API уже обеспечивает этот вход, дополнительный класс не
+требуется.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p>Массив <code>[2, -1, 2, 0]</code> после сортировки содержит
+<code>[2, 2, 0, -1]</code> в том же объекте массива.</p>
+<p>Массив <code>[Integer.MIN_VALUE, 0, Integer.MAX_VALUE]</code>
+становится <code>[Integer.MAX_VALUE, 0, Integer.MIN_VALUE]</code>, также
+в том же объекте.</p>
+</section>
+<p>Единственный файл решения — <code>Study.java</code>, без объявления
+пакета. Решение, вспомогательные классы и методы размещайте в нём.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;import java.util.function.*;import java.nio.file.Path;
+/** Связь с собственным решением; модель и алгоритм создайте самостоятельно. */
+public class Study {
+    public static void sortDescending(Integer[] input) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

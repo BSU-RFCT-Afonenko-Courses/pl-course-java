@@ -1,0 +1,158 @@
+{
+  "uuid": "f6fc8968-1e05-5a03-b6aa-809db63ef93c",
+  "type": "Homework",
+  "title": "Числовые вычисления",
+  "set": "Homework",
+  "number": "1",
+  "maxPoints": 70,
+  "text": "<p>Аргументы запуска передают строки, числовые выражения вычисляются в\nтипах своих операндов, а строгость сравнения определяет, входит ли\nграничная точка в промежуток. Эти различия определяют требуемый\nрезультат программы.</p>\n<p>Подготовка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/practice/numbers.html#/sec-practice-numbers\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Числовые вычисления</a>.\nПодробное объяснение типов и преобразований — <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/types.html#sec-theory-types\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 4</a> и <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/expressions.html#sec-theory-expressions\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 5</a>; команды — <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/java-tools.html#sec-api-java-tools\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 25</a>.</p>\n<h2\nid=\"pl-0f3519fb-df29-5a2e-a8a4-69d3f48fe328-представление-решения\">Представление\nрешения</h2>\n<p>Представьте исходные Java-файлы и покажите запуск обычных и граничных\nслучаев. Объясните, какой тип имеет каждое промежуточное числовое\nвыражение и почему проверочные данные различают правильную реализацию и\nвозможную ошибку.</p>\n<p>Имена вспомогательных методов, разбиение программы и способ\nвычисления выбирайте самостоятельно. Используйте Java 25. Отдельный\nбольшой отчёт и собственная инфраструктура автоматической проверки не\nтребуются.</p>\n<h2 id=\"pl-0f3519fb-df29-5a2e-a8a4-69d3f48fe328-условия-задач\">Условия\nзадач</h2>\n<p>Полные условия и общие правила находятся в темах банка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/numbers.html#sec-bank-numbers\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Числовые вычисления</a>.</p>\n<div\nid=\"pl-0f3519fb-df29-5a2e-a8a4-69d3f48fe328-3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9\"\nclass=\"hidden\">\n\n</div>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Числовые вычисления",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-numbers-console-greeting",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-numbers-image-size",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-numbers-interval-membership",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-numbers-gallon-conversion",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-numbers-quadratic-roots",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-numbers-boolean-truth-table",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-numbers-argument-sum-product",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Добровольные задания",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-numbers-lunar-weight",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-numbers-lightning-distance",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-numbers-radix-conversion",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-numbers-short-circuit-and",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-numbers-binary-truth-table",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-numbers-random-console-values",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        }
+      ]
+    }
+  ]
+}

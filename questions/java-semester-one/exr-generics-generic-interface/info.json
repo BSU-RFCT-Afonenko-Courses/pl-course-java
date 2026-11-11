@@ -1,0 +1,20 @@
+{
+  "uuid": "30e730b9-d266-5062-bd4a-f60ea5e37694",
+  "type": "v3",
+  "title": "Реализация обобщённого интерфейса",
+  "topic": "Java",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

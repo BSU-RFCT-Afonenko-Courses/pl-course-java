@@ -1,0 +1,140 @@
+{
+  "uuid": "a454b3ce-f0af-5000-9949-e678c21893ab",
+  "type": "Homework",
+  "title": "Управление обработкой данных",
+  "set": "Homework",
+  "number": "2",
+  "maxPoints": 60,
+  "text": "<p>Результат цикла относится к уже обработанной части входа. У\nтекстового потока завершение задают EOF и терминатор; у числовой\nпоследовательности — объявленное количество значений. Организуйте чтение\nв соответствии с каждым из этих протоколов.</p>\n<p>Подготовка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/control.html#sec-theory-control-input-state\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Поток ввода и граница\nобработанного состояния</a> и <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/control.html#sec-theory-control-reader\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Полный цикл чтения текста</a>.\nФормы чтения: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/console.html#sec-api-console\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 21</a>. Введение к\nработе: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/practice/control.html#/sec-practice-control\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Управление обработкой\nданных</a>.</p>\n<p>Первая задача различает обычный пробел, другие разделители,\nтерминатор и EOF. Вторая требует выбрать начальное значение результата\nдля непустой последовательности. Чтение чисел можно выполнить через\n<code>Scanner</code>; форму цикла и разбиение на методы выберите\nсамостоятельно. Полный корректный числовой вход гарантирован условием;\nпроверяется только явно указанная граница <code>n</code>.</p>\n<h2\nid=\"pl-b8ddf1d0-2a4b-5df4-aa1c-9010a01faac1-представление-решения\">Представление\nрешения</h2>\n<p>Представьте исходники и команды запуска. Для текста покажите точку в\nначале, пробелы рядом с табуляцией, завершение по EOF и данные после\nточки. Для чисел — одно значение, все отрицательные значения и\n<code>n = 0</code>. Объясните состояние счётчика или экстремума после\nконкретного шага и его связь с уже обработанными данными.</p>\n<h2 id=\"pl-b8ddf1d0-2a4b-5df4-aa1c-9010a01faac1-условия-задач\">Условия\nзадач</h2>\n<p>Полные условия и общие правила находятся в темах банка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/control.html#sec-bank-control\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Управляющие\nконструкции</a>.</p>\n<div\nid=\"pl-b8ddf1d0-2a4b-5df4-aa1c-9010a01faac1-3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9\"\nclass=\"hidden\">\n\n</div>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Управление обработкой данных",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-control-count-console-spaces",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-control-number-extrema",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-control-month-name",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-control-toggle-console-case",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-control-multiplication-table",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-control-primes-to-hundred",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Добровольные задания",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-control-control-help-menu",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-control-inch-conversion-table",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-control-distinct-three-digits",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-control-numeric-palindromes",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-control-increasing-digits",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        }
+      ]
+    }
+  ]
+}

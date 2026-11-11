@@ -1,0 +1,62 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Начальный</p>
+<p>Объявите абстрактный <code>TwoDShape</code> с закрытыми полями
+<code>double width</code>, <code>double height</code>,
+<code>String name</code> и конструктором
+<code>TwoDShape(double width, double height, String name)</code>.
+Предусмотрите открытые методы <code>double getWidth()</code>,
+<code>double getHeight()</code>, <code>String getName()</code> и
+абстрактный <code>public double area()</code>.</p>
+<p>Создайте подкласс <code>Circle</code> с открытым конструктором
+<code>Circle(double radius)</code>. Допустимый радиус — конечное
+<code>double</code> в диапазоне <code>0 &lt; radius &lt;= 1e150</code>;
+неверные входы проверять не требуется. Через <code>super</code>
+передайте в базовый класс ширину и высоту, равные диаметру, и имя
+<code>"circle"</code>. Реализуйте площадь круга; способ вычисления
+выбирайте самостоятельно.</p>
+<p>Размеры и площадь должны соответствовать одному радиусу. Для радиуса
+2 ширина и высота равны 4, площадь приблизительно 12.566370614359172.
+Результат площади конечен. Если математическая площадь равна
+<code>y = πr²</code>, возвращённое значение a удовлетворяет
+<code>|a - y| &lt;= max(1e-9, 1e-12 * |y|)</code>.</p>
+<p>Предъявите исходники и консольную демонстрацию размеров, имени и
+площади. Покажите вызов <code>area()</code> через ссылку
+<code>TwoDShape</code>; объясните, как <code>super</code> устанавливает
+размеры базового класса. Вспомогательные методы и способ запуска
+демонстрации выбирайте самостоятельно.</p>
+<h4
+id="pl-31c99cb6-8bcf-5aec-a91e-e635733048ce-вход-для-воспроизводимой-проверки">Вход
+для воспроизводимой проверки</h4>
+<p>Обязательные объявления входа заданы в стартере; сохраните их и
+свяжите со своим решением. Собственные классы, видимость,
+вспомогательные методы и алгоритмы выбирайте в пределах условия. Если
+предметный API уже обеспечивает этот вход, дополнительный класс не
+требуется.</p>
+<p>Для сдачи используйте файлы <code>Circle.java</code> и
+<code>TwoDShape.java</code> из <code>src/main/java</code> стартового
+проекта. Разместите их в двух редакторах без объявления пакета.
+Вспомогательные классы и методы можно определить в этих файлах;
+демонстрацию можно разместить в одном из них, без третьего
+исходника.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>Круг радиуса 2.</strong> Создайте <code>Circle(2)</code> и
+прочитайте размеры, имя и площадь через ссылку <code>TwoDShape</code>.
+Ширина и высота равны <code>4</code>, имя — <code>circle</code>, площадь
+— приблизительно <code>12.566370614359172</code>. Для математической
+площади <code>y</code> действует допуск
+<code>abs(a - y) &lt;= max(1e-9, 1e-12 * abs(y))</code>.</p>
+<p><strong>Максимальный допустимый радиус.</strong> Для
+<code>Circle(1e150)</code> ширина и высота равны <code>2e150</code>, имя
+— <code>circle</code>. Площадь конечна и соответствует
+<code>π * 10^300</code> с тем же допуском; вызов выполняется через
+<code>TwoDShape</code>.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Circle.java" ace-mode="ace/mode/java" normalize-to-ascii="false">public class Circle extends TwoDShape {public Circle(double radius){super(0,0,&quot;&quot;);throw new UnsupportedOperationException(&quot;TODO: конструктор Circle&quot;);}public double area(){throw new UnsupportedOperationException(&quot;TODO: площадь&quot;);&#125;&#125;
+</pl-file-editor>
+<pl-file-editor file-name="TwoDShape.java" ace-mode="ace/mode/java" normalize-to-ascii="false">public abstract class TwoDShape {private double width,height;private String name;protected TwoDShape(double width,double height,String name){throw new UnsupportedOperationException(&quot;TODO: состояние базового класса&quot;);}public double getWidth(){return width;}public double getHeight(){return height;}public String getName(){return name;}public abstract double area();}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

@@ -1,0 +1,202 @@
+{
+  "uuid": "cf890a50-0e8e-53b6-871b-65989cf5219a",
+  "type": "Homework",
+  "title": "Функциональная обработка",
+  "set": "Homework",
+  "number": "9",
+  "maxPoints": 80,
+  "text": "<p>Переданное действие определяет условие отбора или преобразование\nэлемента. Порядок результата и момент вызова действия задаются\nалгоритмом обработки.</p>\n<p>Теория: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/functions.html#sec-theory-functions\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 19</a> и <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/streams.html#sec-theory-streams-lazy\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Ленивость промежуточных\nопераций</a>. API: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/functions.html#sec-api-functions\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 18</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/streams.html#sec-api-streams\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 19</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/streams.html#sec-api-streams-char-units\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Кодовые единицы строки как\nисточник</a>. Введение: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/practice/pipelines.html#/sec-practice-pipelines\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Функциональная\nобработка</a>.</p>\n<h2\nid=\"pl-7606b934-3a62-570e-8e30-a7cb272a3e6c-предъявление-и-объяснение\">Предъявление\nи объяснение</h2>\n<p>Покажите строгую границу длины, пустой отбор, повтор и равные\nгеометрические расстояния точек, отсутствующее слово либо пробел и\nсуррогатные кодовые единицы текста, обе ветви условной функции. Для\nточек используйте целые координаты из <code>[-10000, 10000]</code>:\nквадраты расстояний точно представимы в <code>int</code>, а равные\nрасстояния требуют сохранения взаимного порядка. В подсчёте слов\nсоблюдайте алфавит и порядок запросов из карточки; в подсчёте кодовых\nединиц учитывайте каждый <code>char</code>.</p>\n<p>Stream и лямбды обязательны там, где названы карточкой. Частоты можно\nполучить отдельными <code>filter</code>/<code>count</code> или общим\nсловарём с последующим отчётом. Для <code>ternaryOperator</code>\nобъясните типовые параметры, момент вызова предиката, выбор ветви и\nповторный <code>apply</code>; класс и способ вызова вашего метода\nсвободны в пределах разрешённых файлов. Точная трасса промежуточных\nдействий Stream зависит от допустимых оптимизаций: объясните, почему\n<code>peek</code> перед <code>count</code> может не выполниться.</p>\n<p>Представьте исходные Java-файлы и короткую демонстрацию обычных и\nсущественных граничных случаев. Используйте Java 25. Обязательная\nтехника проверяется по исходнику; объяснение включает связь входа,\nрезультата и выбранного алгоритма.</p>\n<h2 id=\"pl-7606b934-3a62-570e-8e30-a7cb272a3e6c-условия-задач\">Условия\nзадач</h2>\n<p>Полные условия и общие правила находятся в темах банка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/pipelines.html#sec-bank-pipelines\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Функциональная\nобработка</a>.</p>\n<div\nid=\"pl-7606b934-3a62-570e-8e30-a7cb272a3e6c-3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9\"\nclass=\"hidden\">\n\n</div>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Выполните одну из задач",
+      "bestQuestions": 1,
+      "questions": [
+        {
+          "id": "java-semester-one/exr-pipelines-divisibility-function",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-pipelines-discriminant-function",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Функциональная обработка",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-pipelines-filter-string-array",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-pipelines-order-points",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Выполните одну из задач",
+      "bestQuestions": 1,
+      "questions": [
+        {
+          "id": "java-semester-one/exr-pipelines-count-selected-words",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-pipelines-count-characters",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Функциональная обработка",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-pipelines-conditional-function",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-pipelines-longer-string",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-pipelines-descending-array",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-pipelines-price-transformation",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Добровольные задания",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-pipelines-curried-functions",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-pipelines-remove-even-values",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-pipelines-vowels-before-consonants",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-pipelines-first-primes",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-pipelines-distinct-object-array",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-pipelines-select-initial-length",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        }
+      ]
+    }
+  ]
+}

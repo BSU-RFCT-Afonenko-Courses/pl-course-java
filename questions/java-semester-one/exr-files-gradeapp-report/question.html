@@ -1,0 +1,186 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Высокий</p>
+<p>Завершите предоставленное консольное приложение
+<code>gradeapp</code>. Реализуйте пять методов заготовки и предъявите
+работающий JAR с входными файлами и граничными примерами.</p>
+<h4
+id="pl-55c436ae-9e87-53a7-8da4-dae9f6317737-команда-и-формат">Команда и
+формат</h4>
+<p>Команда <code>grade.Main input threshold</code> получает ровно два
+аргумента: путь UTF-8-файла и целый порог 0–100. Относительный путь
+разрешается от рабочего каталога. Отчёт выводится в stdout, диагностика
+— в stderr. Предоставленная точка входа проверяет число аргументов,
+порог и синтаксис пути до чтения. Порог разбирается через
+<code>Integer.parseInt</code> без <code>strip</code>.</p>
+<p>Каждая значимая строка файла содержит ровно три поля
+<code>id;name;score</code>. Кавычки и экранирование не используются.
+<code>strip()</code> удаляет краевые пробельные символы полей; балл
+разбирается как <code>int</code>. Строки, для которых
+<code>isBlank()</code> возвращает <code>true</code>, пропускаются.
+Физический номер начинается с 1 и учитывает каждую строку, включая
+пропущенные.</p>
+<p>Предоставленная запись
+<code>grade.Student(String id, String name, int score)</code>
+нормализует <code>id</code> и <code>name</code> через
+<code>strip</code>; они непустые и не содержат <code>;</code>, CR и LF.
+Балл находится в диапазоне 0–100. Нулевые ссылки
+<code>id</code>/<code>name</code> приводят к
+<code>NullPointerException</code>, остальные нарушения — к
+<code>IllegalArgumentException</code>. Равенство записи включает все три
+компонента. В каталоге нормализованные коды уникальны с учётом регистра:
+<code>s1</code> и <code>s1</code> — повтор, <code>s1</code> и
+<code>S1</code> — разные коды.</p>
+<h4
+id="pl-55c436ae-9e87-53a7-8da4-dae9f6317737-методы-для-реализации">Методы
+для реализации</h4>
+<p>Методы размещены в предоставленных классах пакета <code>grade</code>.
+Сохраните их имена, доступ, параметры и возвращаемые типы. Проверяемые
+отказы должны оставаться в объявленной области <code>throws</code>:
+допустимое сужение сохраняет совместимость обычного вызывающего кода,
+который отдельно обрабатывает указанные исключения. Список проверяемых
+исключений, которые обязан учитывать клиент, расширяться не должен.</p>
+<ul>
+<li><code>StudentParser</code>:
+<code>public static Student parse(String line, long number) throws DataFormatException</code>.
+Предусловия — ненулевая строка и положительный физический номер.
+Проверьте три поля, сохраняя возможное пустое последнее поле. Неверное
+число или нарушение ограничений <code>Student</code> оберните в
+<code>DataFormatException</code> с исходной причиной
+<code>NumberFormatException</code> или
+<code>IllegalArgumentException</code>. Сообщение начинается с
+<code>строка &lt;number&gt;:</code> и поясняет отказ. Для неверного
+числа полей сообщите отдельную ошибку формата; причина для неё
+необязательна.</li>
+<li><code>StudentFiles</code>:
+<code>public static List&lt;Student&gt; read(Path path) throws IOException, DataFormatException</code>.
+Предусловие — ненулевой путь. Прочитайте UTF-8, пропустите пробельные
+строки, проверьте уникальность кодов. При повторе выбросьте
+<code>DataFormatException</code> с сообщением
+<code>строка &lt;number&gt;: повтор кода &lt;id&gt;</code>; причина для
+этого отказа необязательна. Отсутствие файла и повреждённый UTF-8
+приводят к <code>IOException</code>. После успешного чтения и закрытия
+верните весь список в порядке входа. Пустой файл даёт пустой список.
+Список имеет самостоятельную структуру; <code>add</code>,
+<code>remove</code>, <code>set</code> и <code>sort</code> запрещены
+через <code>UnsupportedOperationException</code>. Частичный каталог при
+отказе не возвращается.</li>
+<li><code>Reports</code>:
+<code>public static List&lt;Student&gt; selected(List&lt;Student&gt; students, int threshold)</code>.
+Предусловие — ненулевой список ненулевых допустимых
+<code>Student</code>. Порог вне 0–100 отклоняется через
+<code>IllegalArgumentException</code>, включая пустой вход. Отберите
+записи с <code>score &gt;= threshold</code>; порядок — балл по убыванию,
+затем код по естественному порядку <code>String</code>. Состав и порядок
+исходного списка сохраняются. Результат имеет самостоятельную структуру:
+последующее изменение исходного списка его не меняет; <code>add</code>,
+<code>remove</code>, <code>set</code> и <code>sort</code> результата
+запрещены через <code>UnsupportedOperationException</code>. Неизменяемые
+элементы <code>Student</code> могут использоваться совместно; создание
+нового экземпляра списка само по себе не является требованием.</li>
+<li><code>Reports</code>:
+<code>public static String line(Student student)</code>. Предусловие —
+ненулевой <code>Student</code>. Верните <code>id;name;score</code> без
+заголовка и перевода строки.</li>
+<li><code>Main</code>:
+<code>static int run(Path input, int threshold) throws IOException, DataFormatException</code>.
+Сохраните пакетный доступ. Для уже проверенных пути и порога свяжите
+чтение, отбор и предоставленный <code>printReport</code>; верните его
+статус. Вывод отчёта начинается после успешной загрузки и проверки всего
+каталога.</li>
+</ul>
+<p>Готовы <code>Student</code>, <code>DataFormatException</code> с
+конструктором причины, <code>Main.main</code>,
+<code>Main.run(String[])</code>, отображение ошибок,
+<code>printReport</code> с проверкой
+<code>PrintStream.checkError</code>, сборка и открытые примеры.
+TODO-тела пяти перечисленных методов компилируются и выбрасывают
+<code>UnsupportedOperationException</code> до реализации. Цикл с
+сортировкой отдельного списка и Stream допустимы. Вспомогательные методы
+и внутреннее устройство решения выбираете самостоятельно.</p>
+<h4
+id="pl-55c436ae-9e87-53a7-8da4-dae9f6317737-внешний-результат">Внешний
+результат</h4>
+<p>Stdout содержит по одной строке <code>id;name;score</code> на
+выбранную запись, без заголовка. Пустой каталог и пустой отбор дают
+пустой stdout и успех. Коды завершения: 0 — успех; 2 — аргументы, порог
+или синтаксис пути; 3 — формат данных, диапазон балла или повтор кода; 4
+— чтение или вывод. При ошибке данных либо чтения stdout пуст; stderr
+поясняет отказ. При отказе вывода уже переданная часть отчёта остаётся у
+получателя. Системные потоки должны оставаться открытыми.</p>
+<h4
+id="pl-55c436ae-9e87-53a7-8da4-dae9f6317737-сборка-и-демонстрация">Сборка
+и демонстрация</h4>
+<p>Нужны установленный Gradle 9.8.0 и JDK 25; <code>JAVA_HOME</code>
+указывает каталог JDK. Из каталога с <code>build.gradle</code> один раз
+подготовьте зависимости через сеть:</p>
+<pre class="console"><code>gradle prepareDependencies</code></pre>
+<p>До реализации TODO проверьте компиляцию и сборку JAR без выполнения
+проверок поведения:</p>
+<pre class="console"><code>gradle --offline assemble testClasses</code></pre>
+<p>После реализации выполните сборку с публичными проверками и запустите
+пример:</p>
+<pre class="console"><code>gradle --offline clean build
+java -jar build/libs/gradeapp.jar samples/students.txt 80</code></pre>
+<p>Для запуска из другого рабочего каталога подставьте абсолютные
+пути:</p>
+<pre class="console"><code>java -jar /absolute/path/student/build/libs/gradeapp.jar /absolute/path/student/samples/students.txt 80</code></pre>
+<p>Пути с пробелами заключайте в кавычки. Аргументов приложения два:
+путь входа и порог. Заготовка с TODO компилируется; её проверки
+поведения должны пройти после реализации пяти методов.</p>
+<p>Для строк <code>s2;Lin;70</code>, <code>s3;Ann;90</code>,
+<code>s10;Ada;90</code> и порога 80 или 90 stdout содержит
+<code>s10;Ada;90</code>, затем <code>s3;Ann;90</code>. При равных баллах
+сравниваются коды как строки: <code>s10</code> предшествует
+<code>s3</code>. Исходный порядок остаётся <code>s2, s3, s10</code>. При
+пороге 100 отбор пуст.</p>
+<p>Покажите баллы 0 и 100, пустой и пробельный файл, коды с разным
+регистром, позднюю неверную строку после пробельной строки с номером 3,
+повтор после <code>strip</code>, отсутствующий файл, неверный порог до
+чтения и запуск JAR из другого каталога. Объясните проверку
+уникальности, самостоятельную структуру результата <code>selected</code>
+и границу начала вывода.</p>
+<p>Подготовка: <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/theory/application.html#sec-theory-application-behavior"
+target="_blank" rel="noopener noreferrer">Наблюдаемое поведение
+приложения</a>, <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/handbook/project.html#sec-api-project-contract"
+target="_blank" rel="noopener noreferrer">Вход, результат и коды</a>, <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/practice/files.html#/sec-practice-files"
+target="_blank" rel="noopener noreferrer">Ресурсы и файлы</a>.</p>
+<h4
+id="pl-55c436ae-9e87-53a7-8da4-dae9f6317737-вход-для-воспроизводимой-проверки-13">Вход
+для воспроизводимой проверки</h4>
+<p>В этом задании сохраняется предоставленный пакет grade и ровно пять
+TODO с опубликованным API. Дополнительный фасад или шестой TODO не
+нужны; готовая поддержка приложения и способ сборки сохраняются.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p>В UTF-8-файле записано
+<code>s2;Lin;70\ns3;Ann;90\ns10;Ada;90\n</code>, где <code>\n</code>
+обозначает LF. Настоящий JAR запускают по абсолютному пути из другого
+рабочего каталога, передав абсолютный путь входа и порог
+<code>80</code>. Программа завершается с кодом <code>0</code>, выводит в
+stdout сначала <code>s10;Ada;90</code>, затем <code>s3;Ann;90</code>, с
+платформенным переводом строки после каждой записи. Stderr пуст, входной
+файл сохраняется.</p>
+<p>Для входа <code>s1;Ada;90\n   \n s1 ;Other;80\n</code> и того же
+порога <code>80</code> программа завершается с кодом <code>3</code>.
+Stdout пуст, stderr содержит
+<code>ошибка данных: строка 3: повтор кода s1</code> с платформенным
+переводом строки. Строка из трёх пробелов пропускается, но учитывается в
+нумерации; входной файл остаётся прежним.</p>
+</section>
+<p>Для сдачи подготовьте архив <code>solution.zip</code> с файлами
+<code>grade/DataFormatException.java</code>,
+<code>grade/Main.java</code>, <code>grade/Reports.java</code>,
+<code>grade/Student.java</code>, <code>grade/StudentFiles.java</code> и
+<code>grade/StudentParser.java</code>. Сохраните пакет
+<code>grade</code> и объявления стартера; вспомогательные классы и
+методы размещайте в этих файлах.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<p>Загрузите один ZIP со всеми исходниками, сохранив перечисленные относительные пути внутри архива.</p>
+
+<pl-file-upload file-names="solution.zip"></pl-file-upload>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

@@ -1,0 +1,71 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Рассмотрите эволюцию интерфейса <code>ICharQ</code> из <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/polymorphism.html#sec-bank-character-queues"
+target="_blank" rel="noopener noreferrer">Очереди символов</a>. Нужно
+добавить <code>reset()</code>, сохранив возможность компиляции класса,
+который реализует только <code>put</code> и <code>get</code>.</p>
+<p>Добавьте метод по умолчанию <code>reset()</code>, который при вызове
+завершает операцию исключением
+<code>UnsupportedOperationException</code>: так клиент узнаёт, что
+старая реализация не поддерживает сброс. В одной новой реализации
+переопределите <code>reset()</code> настоящим сбросом. Сравните
+результаты и объясните различие совместимости исходного кода и поддержки
+операции.</p>
+<p>Предъявите исходники старой и новой реализаций. Покажите компиляцию
+старого класса с расширенным интерфейсом, его отказ при сбросе и
+повторное заполнение новой очереди после настоящего сброса. Общий
+договор очередей входит в комплект.</p>
+<p><a
+href="{{options.client_files_question_url}}/test-support/shared/d086641fede1/character-queues.md"
+target="_blank" rel="noopener noreferrer">Очереди символов</a></p>
+<h4
+id="pl-bbb576d1-afe7-5a4d-90e6-c305f9db325f-вход-для-воспроизводимой-проверки-9">Вход
+для воспроизводимой проверки</h4>
+<p>Обязательные объявления входа заданы в стартере; сохраните их и
+свяжите со своим решением. Собственные классы, видимость,
+вспомогательные методы и алгоритмы выбирайте в пределах условия. Если
+предметный API уже обеспечивает этот вход, дополнительный класс не
+требуется.</p>
+<p>Возвращаемый тип реального reset и вывод этого метода остаются
+свободными; вход проверки игнорирует его возвращаемое значение. Законный
+унаследованный default допускается, старая реализация по-прежнему
+объявляет только put/get.</p>
+<p>Единственный файл решения — <code>Study.java</code> из
+<code>src/main/java</code>, без объявления пакета. Предметные и
+вспомогательные классы можно определить в нём как вложенные или
+неоткрытые классы верхнего уровня. Методы и реализацию выбирайте
+самостоятельно; демонстрацию также можно разместить в этом файле.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>Поддерживаемый сброс.</strong> В новую очередь поместите
+<code>A</code>, <code>B</code>, извлеките <code>A</code> и вызовите
+<code>reset()</code>. Следующий <code>get()</code> печатает «Очередь
+пуста» и возвращает <code>\0</code>: прежний <code>B</code> больше не
+извлекается. После помещения <code>C</code> извлечение возвращает
+<code>C</code>. Успешные <code>put</code> и <code>get</code> молчат;
+вывод и возвращаемое значение самого <code>reset()</code> свободны.</p>
+<p><strong>Старая реализация.</strong> В старую очередь, реализующую
+только <code>put</code> и <code>get</code>, поместите <code>A</code>.
+Унаследованный <code>reset()</code> выбрасывает
+<code>UnsupportedOperationException</code>; после отказа
+<code>get()</code> возвращает <code>A</code> без сообщения.
+Совместимость исходного кода проверяется его компиляцией.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;import java.util.function.*;import java.nio.file.Path;
+/** Связь с собственным решением; модель и алгоритм создайте самостоятельно. */
+public class Study {
+    /** Создайте настоящую старую реализацию, объявляющую только put/get. Default reset может наследоваться из другого интерфейса. */
+    public static Object oldQueue() { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Создайте настоящую новую реализацию с работающим reset. Внутренние имена и результат reset свободны. */
+    public static Object newQueue() { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    public static void put(Object queue,char value) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    public static char get(Object queue) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Вызовите reset собственной очереди, игнорируя свободный результат. Не выполняйте сброс во входе проверки. */
+    public static void reset(Object queue) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

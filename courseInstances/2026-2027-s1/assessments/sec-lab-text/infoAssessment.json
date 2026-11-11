@@ -1,0 +1,158 @@
+{
+  "uuid": "25e969e5-5b1b-576b-8553-2d32dfb18ef5",
+  "type": "Homework",
+  "title": "Обработка текста",
+  "set": "Homework",
+  "number": "4",
+  "maxPoints": 70,
+  "text": "<p>Найдите границы в исходной строке и постройте результат по условию\nзадачи. <code>String</code> не меняет свой текст, а длина результата\nможет отличаться от длины входа.</p>\n<p>Подготовка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/text.html#sec-theory-text-positions\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Вставка текста</a> и <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/text.html#sec-theory-text-word-walk\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Построение результата по\nисходным границам</a>. Справочник: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/strings.html#sec-api-strings\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 7</a>. Введение к\nработе: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/practice/text.html#/sec-practice-text\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Обработка текста</a>. Алфавит\nи единица обработки заданы в <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/text.html#sec-bank-text-input\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Данные и границы\nтекста</a>.</p>\n<p>Для поиска слов можно применить индексный проход или подходящий\nшаблон; для сборки — строковые операции или <code>StringBuilder</code>.\nУсловие определяет результат и сохранение разделителей, устройство\nрешения определяете вы. Каждая программа получает данные аргументами\nкомандной строки; полный текст передаётся одним аргументом. Точные\nпорядок аргументов и вывод заданы в карточках. Вспомогательные методы\nсвободны. Например, <code>java Main \"кот дом\" 2 \"*\"</code> передаёт\nпрограмме замены три аргумента; <code>java Main \"\" 2 \"*\"</code>\nсохраняет пустой первый аргумент. Для программ экстремумов и сжатия\nпустой вход передаётся как <code>java Main \"\"</code>. В задаче сжатия\nвход ограничен латинскими буквами. Границу серии определяет изменение\nсоседней буквы с учётом регистра.</p>\n<h2\nid=\"pl-5bf91c57-b726-5e5d-b46c-18bfa45dc3a7-представление-решения\">Представление\nрешения</h2>\n<p>Представьте исходники и воспроизводимые примеры. В задачах со словами\nпокажите короткое слово, слова рядом с цифрой и табуляцией, текст без\nслов и равенство длин разных слов. Для серий нужны одиночная буква,\nпоследняя серия и серия длиннее девяти символов. Объясните, какие\nиндексы относятся к исходной строке и почему изменение длины результата\nне сдвигает ещё не обработанный вход.</p>\n<h2 id=\"pl-5bf91c57-b726-5e5d-b46c-18bfa45dc3a7-условия-задач\">Условия\nзадач</h2>\n<p>Полные условия и общие правила находятся в темах банка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/text.html#sec-bank-text\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Обработка текста</a>.</p>\n<div\nid=\"pl-5bf91c57-b726-5e5d-b46c-18bfa45dc3a7-3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9\"\nclass=\"hidden\">\n\n</div>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Обработка текста",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-text-replace-word-letter",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-text-word-length-extrema",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-text-compress-character-runs",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-text-insert-substring",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-text-sum-text-digits",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-text-remove-nonletters",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-text-count-normalized-word",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Добровольные задания",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-text-strong-password",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-text-longest-nonletter-substring",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-text-insert-after-word-ending",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-text-decompress-character-runs",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-text-left-align-text",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-text-bubble-sort-strings",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        }
+      ]
+    }
+  ]
+}

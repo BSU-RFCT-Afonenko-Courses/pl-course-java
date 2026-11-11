@@ -1,0 +1,20 @@
+{
+  "uuid": "31cfa014-6375-51da-af7e-113e02f04a7c",
+  "type": "v3",
+  "title": "Таблица преобразования дюймов в метры",
+  "topic": "Java",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

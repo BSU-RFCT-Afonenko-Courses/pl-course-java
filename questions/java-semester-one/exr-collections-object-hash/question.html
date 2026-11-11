@@ -1,0 +1,50 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Программа получает произвольный массив строк-кодов, в том числе
+пустой. Массив и его элементы отличны от <code>null</code>. Каждый
+элемент — одно обращение; повторный код означает новое обращение к той
+же записи. Коды сравниваются с учётом регистра, без обрезки пробелов и
+иной нормализации.</p>
+<p>Создайте собственный обычный класс ключа с неизменяемым строковым
+кодом, согласованными <code>equals</code> и <code>hashCode</code>.
+Используйте его экземпляры в <code>HashSet</code> для посещённых записей
+и в <code>HashMap</code> для числа обращений к каждой записи. Состав
+множества и частоты соответствуют всему массиву; вход сохраняется. Для
+пустого массива оба результата пусты. Готовые строки и
+<code>record</code> не заменяют собственный обычный класс ключа.</p>
+<p>Покажите <code>s17, s18, s17</code>: различных записей 2, частоты
+<code>s17 → 2</code>, <code>s18 → 1</code>. Для повторных вхождений
+создавайте отдельные объекты ключей. Поиск новым равным ключом находит
+прежнюю частоту. Добавьте разные коды <code>Aa</code> и <code>BB</code>:
+оба ключа сохраняются. У строк этих кодов одинаковые хеши; собственный
+класс вправе выбирать любой согласованный хеш. Допустимы
+<code>getOrDefault</code>/<code>put</code> и <code>merge</code>. Порядок
+перечисления и формат вывода свободны.</p>
+<p>Предъявите исходники и консольную демонстрацию, включая пустой вход.
+Объясните согласование <code>equals</code>/<code>hashCode</code> и
+устойчивость кода ключа во время хранения. Для готового
+<code>grade.Student(String id, String name, int score)</code> объясните,
+почему новая версия с другим <code>score</code> имеет другое полное
+значение, сохраняя код каталога. Ваш ключ выражает равенство именно по
+коду. Чтение данных и способ запуска выбирайте самостоятельно.
+Подготовка: <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/theory/equality.html#sec-theory-equality-domain"
+target="_blank" rel="noopener noreferrer">Равенство записи и
+уникальность кода</a>, <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/theory/equality.html#sec-theory-equality-hash"
+target="_blank" rel="noopener noreferrer">Равенство и хеш</a>, <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/handbook/sets-maps.html#sec-api-sets-maps-map"
+target="_blank" rel="noopener noreferrer">Карты</a>.</p>
+<p>Для сдачи подготовьте архив <code>solution.zip</code> с файлами
+<code>src/main/java/Audit.java</code>,
+<code>src/main/java/CodeKey.java</code> и
+<code>src/main/java/grade/Student.java</code>. Сохраните пакет
+<code>grade</code> у <code>Student</code>; остальные два файла оставьте
+без объявления пакета. Вспомогательные классы и методы размещайте в этих
+файлах.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<p>Загрузите один ZIP со всеми исходниками, сохранив перечисленные относительные пути внутри архива.</p>
+
+<pl-file-upload file-names="solution.zip"></pl-file-upload>
+</pl-question-panel>

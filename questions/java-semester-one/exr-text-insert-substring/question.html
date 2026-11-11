@@ -1,0 +1,61 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Начальный</p>
+<p>Алфавит и единица счёта: <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/text.html#sec-bank-text-input"
+target="_blank" rel="noopener noreferrer">Данные и границы
+текста</a>.</p>
+<p>Вставьте заданную подстроку после <code>k</code>-го символа текста.
+Вход — исходный текст, подстрока и целое <code>k</code> от 0 до длины
+текста включительно. Нумерация символов начинается с единицы:
+<code>k = 0</code> означает вставку перед первым символом, а
+<code>k</code>, равное длине, — после последнего. Все символы исходного
+текста сохраняются. Для пустого текста допустимо только
+<code>k = 0</code>.</p>
+<p>Выделите вставку в метод, принимающий исходный текст, фрагмент и
+позицию и возвращающий строку результата. Исходная строка сохраняется.
+Допустимые входы удовлетворяют указанным границам; отдельная обработка
+иных позиций не требуется. Пустой вставляемый фрагмент сохраняет
+текст.</p>
+<p>Покажите примеры: <code>"Java"</code> и <code>"!"</code> при
+<code>k = 0</code> дают <code>"!Java"</code>, при <code>k = 4</code> —
+<code>"Java!"</code>; пустой текст и <code>"код"</code> при
+<code>k = 0</code> дают <code>"код"</code>. Можно использовать
+<code>substring</code> и конкатенацию или <code>StringBuilder</code>;
+способ выберите самостоятельно.</p>
+<p>Покажите метод и результаты его вызовов. Объясните, где проходит
+граница между частями исходной строки при вставке, включая пустую
+часть.</p>
+<p>Сохраните обязательные имя класса и сигнатуру операции из
+канонического стартера и реализуйте её для переданных данных. Алгоритм,
+вспомогательные методы и классы, форму <code>main</code>, способ задания
+данных и оформление демонстрации выберите самостоятельно.</p>
+<p>Если карточка не задаёт более узкий алфавит, входные строки состоят
+из латинских букв A–Z/a–z, русских букв А–Я/а–я с Ё/ё, цифр 0–9, знаков
+препинания ASCII, пробелов, табуляций и переводов строки. Составные
+сочетания Unicode не допускаются. Строки не равны <code>null</code>;
+пустая строка допустима. Символ и единица длины здесь — один
+<code>char</code>.</p>
+<p>Единственный файл решения — <code>Study.java</code> из
+<code>src/main/java</code>, без объявления пакета. Вспомогательные
+классы, методы и демонстрацию можно разместить в нём.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p>Вызов <code>Study.insert("Java", "!", 2)</code> возвращает
+<code>"Ja!va"</code>: граница вставки проходит после двух исходных
+символов.</p>
+<p>Для текста <code>"Java"</code> и фрагмента <code>"!"</code> позиция
+<code>0</code> даёт <code>"!Java"</code>, а позиция <code>4</code> —
+<code>"Java!"</code>. Пустой текст с фрагментом <code>"код"</code> и
+позицией <code>0</code> даёт <code>"код"</code>.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">/** Реализуйте операцию по условию, сохранив её обязательный интерфейс. */
+public class Study {
+  public static String insert(String text, String fragment, int position) {
+    throw new UnsupportedOperationException(&quot;Реализуйте операцию из условия задания&quot;);
+  }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

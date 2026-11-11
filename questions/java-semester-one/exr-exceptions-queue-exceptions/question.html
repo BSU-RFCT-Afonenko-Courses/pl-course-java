@@ -1,0 +1,53 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Создайте <code>FixedQueue</code> и <code>ICharQ</code> по <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/polymorphism.html#sec-bank-character-queues"
+target="_blank" rel="noopener noreferrer">Очереди символов</a>, но
+вместо сообщений и нулевого символа используйте проверяемые исключения
+<code>QueueFullException</code> и <code>QueueEmptyException</code>.</p>
+<p>Объявите их в <code>put(char)</code> и <code>char get()</code>
+интерфейса и реализации. Ёмкость положительна, недопустимая ёмкость
+отклоняется через <code>IllegalArgumentException</code>. Неудачная
+операция сохраняет состояние очереди.</p>
+<p>В <code>QExcDemo</code> покажите заполнение, отказ при переполнении,
+извлечение в FIFO-порядке и отказ при пустой очереди. Обработайте оба
+учебных исключения в вызывающем коде.</p>
+<p><code>FixedQueue</code> имеет открытый конструктор с параметром
+<code>int capacity</code> и открытые методы <code>void put(char)</code>
+и <code>char get()</code>. Символы хранятся в закрытом массиве. Очередь
+использует линейные индексы: после <code>capacity</code> успешных
+помещений следующий <code>put</code> отказывает даже после частичного
+извлечения. Освобождённые позиции повторно не используются. Успешные
+операции ничего не печатают. Входные символы соответствуют общему
+договору: <code>char</code>, кроме <code>'\0'</code>; проверять
+нарушение этого предусловия не требуется.</p>
+<p>Предъявите исходники и последовательность операций с частичным
+извлечением. Объясните состояние очереди после отказа и обработку обоих
+исключений в <code>QExcDemo</code>. Имена вспомогательных элементов и
+оформление демонстрации выберите самостоятельно.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>FIFO после заполнения.</strong> В <code>FixedQueue(2)</code>
+поместите <code>A</code>, <code>Б</code>. Два вызова <code>get()</code>
+возвращают <code>A</code>, затем <code>Б</code>; успешные операции
+молчат.</p>
+<p><strong>Линейные позиции после частичного извлечения.</strong> В
+<code>FixedQueue(2)</code> поместите <code>A</code>, <code>Б</code> и
+извлеките <code>A</code>. Попытка поместить <code>В</code> выбрасывает
+<code>QueueFullException</code>; последующее извлечение возвращает
+прежнюю <code>Б</code>.</p>
+<p><strong>Пустое извлечение.</strong> После извлечения <code>A</code> и
+<code>Б</code> из <code>FixedQueue(2)</code> следующий
+<code>get()</code> выбрасывает <code>QueueEmptyException</code>.</p>
+</section>
+<p>Для сдачи загрузите отдельными файлами <code>FixedQueue.java</code>,
+<code>ICharQ.java</code>, <code>QExcDemo.java</code>,
+<code>QueueEmptyException.java</code> и
+<code>QueueFullException.java</code>, без объявления пакета.
+Вспомогательные классы и методы размещайте в этих файлах.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+
+<pl-file-upload file-names="FixedQueue.java,ICharQ.java,QExcDemo.java,QueueEmptyException.java,QueueFullException.java"></pl-file-upload>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

@@ -1,0 +1,25 @@
+{
+  "uuid": "89e7d478-fa2e-5f59-a9ca-f57edd0d978d",
+  "type": "v3",
+  "title": "Вычитание среднего из элементов строки матрицы",
+  "topic": "Java",
+  "gradingMethod": "External",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": true,
+  "externalGradingOptions": {
+    "image": "ghcr.io/afonenko-course-tools/java25-grader@sha256:89a8651f93b2ae4b9bf522299c60a27043de493a6c5a7d5393c0231e4b791bb8",
+    "timeout": 300,
+    "enableNetworking": false
+  },
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

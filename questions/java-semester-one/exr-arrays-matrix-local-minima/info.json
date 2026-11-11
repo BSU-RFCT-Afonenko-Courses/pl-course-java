@@ -1,0 +1,20 @@
+{
+  "uuid": "14ecbbb4-3434-5506-b74d-8603804d8181",
+  "type": "v3",
+  "title": "Локальные минимумы матрицы",
+  "topic": "Java",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "44557c9b-3c62-5f62-96c4-74ba18632c5c",
+  "type": "v3",
+  "title": "Ошибки в обработке и генерации исключений",
+  "topic": "Java",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

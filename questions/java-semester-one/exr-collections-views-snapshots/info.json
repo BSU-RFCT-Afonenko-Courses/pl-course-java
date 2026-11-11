@@ -1,0 +1,20 @@
+{
+  "uuid": "cd78e47e-999c-5f83-a67c-74288b6f5a4c",
+  "type": "v3",
+  "title": "Список книг для текущего просмотра и отчёта",
+  "topic": "Java",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

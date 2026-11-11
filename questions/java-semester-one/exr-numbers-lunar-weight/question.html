@@ -1,0 +1,69 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Начальный</p>
+<p>Напишите программу, вычисляющую силу тяжести на Луне как 17% силы
+тяжести на Земле. Исходное значение — неотрицательное конечное
+<code>double</code> в ньютонах; результат также выражается в ньютонах.
+Масса тела при перемещении на Луну не меняется. В исходнике задайте
+положительный пример и покажите также нулевое значение.</p>
+<p>Вход и результат: если стандартный ввод содержит одно число,
+вычислите результат для него и выведите только полученное число. Для
+ввода <code>100</code> результат — <code>17</code>, для <code>0</code> —
+<code>0</code>, для <code>7.5</code> — <code>1.275</code>. При пустом
+стандартном вводе покажите два результата: для нуля и выбранного
+положительного примера, по одному числу в строке. Числовые аргументы
+командной строки не требуются.</p>
+<p>Обозначим входное значение <code>double</code> через
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>,
+а математический результат
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>17</mn><mi>x</mi><mi>/</mi><mn>100</mn></mrow><annotation encoding="application/x-tex">17x/100</annotation></semantics></math>
+— через
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>.
+Выведенное число
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+должно быть конечным. Абсолютная ошибка — это
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>r</mi><mo>−</mo><mi>y</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|r-y|</annotation></semantics></math>,
+измеренная в ньютонах. В этой задаче предел ошибки равен большему из
+двух значений: <code>1e-8</code> Н и <code>1e-12</code> от величины
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>y</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|y|</annotation></semantics></math>:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>r</mi><mo>−</mo><mi>y</mi><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><mrow><mi mathvariant="normal">max</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>8</mn></mrow></msup><mo>,</mo><mspace width="0.278em"></mspace><msup><mn>10</mn><mrow><mi>−</mi><mn>12</mn></mrow></msup><mo stretchy="false" form="prefix">|</mo><mi>y</mi><mo stretchy="false" form="prefix">|</mo><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+|r-y| \leq \max(10^{-8},\;10^{-12}|y|).
+</annotation></semantics></math></p>
+<p>Первый предел сохраняет допуск в окрестности нуля, второй учитывает
+масштаб результата. Способ вычисления выберите самостоятельно. Результат
+можно выводить в десятичной или экспоненциальной форме с точкой;
+количество знаков после точки не фиксируется.</p>
+<p>Точка входа — <code>Main.main(String[] args)</code>.</p>
+<p>Покажите вычисление для положительного значения и нуля, а также
+запуск с пустым завершённым вводом. Объясните единицы измерения,
+выбранные типы и соблюдение допуска при вычислении.</p>
+<p>Единственный файл решения — <code>Main.java</code> из
+<code>src/main/java</code>, без объявления пакета. Вспомогательные
+классы и методы можно определить в нём.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p>В отдельных запусках без аргументов передайте в стандартный ввод
+<code>100</code> или <code>7.5</code>, затем EOF. Программа выводит
+соответственно одно конечное число <code>17</code> или
+<code>1.275</code>. Для результата <code>y</code> допуск равен
+<code>max(1e-8, 1e-12*abs(y))</code>; допустимы десятичная и
+экспоненциальная запись с точкой.</p>
+<p>В новом процессе передайте число <code>0</code>, затем EOF: нужен
+один конечный результат <code>0</code> с абсолютным допуском
+<code>1e-8</code>. Числовой нуль не означает пустой ввод и не включает
+демонстрационный режим.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Main.java" ace-mode="ace/mode/java" normalize-to-ascii="false">/**
+ * Расчёт веса на Луне по земному весу.
+ * Условия ввода, формат вывода и примеры приведены в README.md.
+ * Алгоритм и вспомогательные методы разработайте самостоятельно.
+ */
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // TODO: вычислите лунный вес; режим ввода и примеры без ввода описаны в README.md.
+    }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

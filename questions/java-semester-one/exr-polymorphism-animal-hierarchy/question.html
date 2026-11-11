@@ -1,0 +1,73 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Создайте иерархию <code>Animal</code> → <code>Dog</code> →
+<code>Puppy</code>. Конструктор каждого класса принимает имя типа
+<code>String</code>; имя не равно <code>null</code>, непустое и
+сохраняется после создания.</p>
+<p>Животное умеет подавать голос; для собаки доступны бег и укус, для
+щенка — прыжок. Имена методов действий выберите самостоятельно. В
+<code>Animal</code> определите голос; <code>Dog</code> и
+<code>Puppy</code> переопределяют эту операцию с одной сигнатурой во
+всей иерархии. Сообщения различают вид животного и его имя; точный текст
+свободен.</p>
+<p>Определите равенство по точному классу и имени, реализуйте
+согласованные <code>equals</code>, <code>hashCode</code>,
+<code>toString</code>. Равенство с <code>null</code> ложно; равные
+объекты имеют одинаковый хеш. <code>toString()</code> позволяет увидеть
+класс и имя, его оформление свободно. Определение равенства и связь с
+хешем: <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/theory/data-classes.html#sec-theory-data-classes-value"
+target="_blank" rel="noopener noreferrer">Обычный класс для
+представления значения</a>.</p>
+<p>Предъявите исходники и консольную демонстрацию голосов трёх видов
+через ссылки <code>Animal</code>, а также действий собаки и щенка.
+Сравните двух собак с одинаковым именем, собаку и щенка с одинаковым
+именем, объекты с разными именами и объект с <code>null</code>;
+сопоставьте равенство с хешами. Объясните, почему собака и щенок с
+одинаковым именем здесь не равны. Вспомогательные методы и способ
+запуска демонстрации выбирайте самостоятельно.</p>
+<h4
+id="pl-33644934-42b8-50d5-b2d9-9bc955aabe82-вход-для-воспроизводимой-проверки-2">Вход
+для воспроизводимой проверки</h4>
+<p>Обязательные объявления входа заданы в стартере; сохраните их и
+свяжите со своим решением. Собственные классы, видимость,
+вспомогательные методы и алгоритмы выбирайте в пределах условия. Если
+предметный API уже обеспечивает этот вход, дополнительный класс не
+требуется.</p>
+<p>Единственный файл решения — <code>Study.java</code> из
+<code>src/main/java</code>, без объявления пакета. Предметные и
+вспомогательные классы можно определить в нём как вложенные или
+неоткрытые классы верхнего уровня. Методы и реализацию выбирайте
+самостоятельно; демонстрацию также можно разместить в этом файле.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>Голоса и действия.</strong> Создайте
+<code>Animal("Зверь")</code>, <code>Dog("Рекс")</code> и
+<code>Puppy("Луч")</code>, вызовите голос через ссылки
+<code>Animal</code>, затем действия собаки и щенка. В сообщениях
+различимы вид и имя животного, действия доступны, имена после вызовов
+сохраняются.</p>
+<p><strong>Одно имя у разных классов.</strong> Два объекта
+<code>Dog("Рекс")</code> равны и имеют одинаковые хеши. Сравнение
+<code>Dog("Рекс")</code> с <code>Puppy("Рекс")</code> в обе стороны даёт
+<code>false</code>; сравнения с <code>Dog("Иной")</code> и
+<code>null</code> также ложны. В <code>toString()</code> собаки и щенка
+различимы их вид и имя.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;import java.util.function.*;import java.nio.file.Path;
+/** Связь с собственным решением; модель и алгоритм создайте самостоятельно. */
+public class Study {
+    /** Верните настоящий Animal/Dog/Puppy для kind=0/1/2, имя передайте модели. Модель и её иерархию создайте самостоятельно. */
+    public static Object create(int kind,String name) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Вызовите настоящий переопределённый голос через базовый тип; верните его строку либо захваченный вывод. */
+    public static String voice(Object animal) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Вызовите доступное действие: 0 — бег, 1 — укус, 2 — прыжок. Верните реальный текст действия. */
+    public static String action(Object animal,int action) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Прочитайте имя того же объекта; новый getter модели не обязателен. */
+    public static String name(Object animal) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

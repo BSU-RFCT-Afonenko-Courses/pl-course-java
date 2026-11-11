@@ -1,0 +1,85 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Высокий</p>
+<p>Используйте готовый <code>course.examples.objects.Book</code> из <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/theory/classes.html#sec-theory-classes-book"
+target="_blank" rel="noopener noreferrer">Защищённое состояние
+книги</a>: конструктор <code>Book(String title)</code>, методы
+<code>title()</code>, <code>borrowed()</code>, <code>borrow()</code>.
+Новая книга доступна; повторный <code>borrow</code> бросает
+<code>IllegalStateException</code>, сохраняя состояние.</p>
+<p>Создайте собственный класс, владеющий закрытым изменяемым списком
+книг. Конструктор получает <code>List&lt;Book&gt;</code> и сохраняет
+независимую копию его состава. Список и элементы отличны от
+<code>null</code>. Пустой список и повторные ссылки допустимы.
+Предоставьте добавление ненулевой ссылки на книгу в конец списка и три
+способа получения <code>List&lt;Book&gt;</code>:</p>
+<ul>
+<li>живое представление текущего состава, запрещающее изменения через
+себя;</li>
+<li>самостоятельную изменяемую копию состава на момент вызова;</li>
+<li>снимок состава на момент вызова, запрещающий изменения через
+себя.</li>
+</ul>
+<p>Используйте по назначению <code>Collections.unmodifiableList</code>,
+<code>new ArrayList&lt;&gt;(...)</code> и <code>List.copyOf</code>.
+Копируется состав списков; объекты <code>Book</code> остаются общими.
+Изменение первоначального входного списка после создания владельца не
+меняет его состав. Добавление через владельца отражается в прежнем живом
+представлении; прежние копия и снимок сохраняют состав. Изменяемая копия
+допускает независимые добавление и удаление.</p>
+<p>Начните с одной книги, получите три результата, добавьте вторую через
+владельца: размеры текущего списка/view/copy/snapshot равны
+<code>2/2/1/1</code>. Вызовите <code>borrow()</code> у первой книги:
+<code>borrowed() == true</code> наблюдается во всех списках, которые её
+содержат. Попытки добавить книгу через view и snapshot завершаются
+<code>UnsupportedOperationException</code>. Новая идентичность объекта
+результата <code>List.copyOf</code> не требуется.</p>
+<p>Предъявите исходники и консольную демонстрацию. Последовательно
+покажите изменение входного списка, добавление через владельца и выдачу
+общей книги. Разделите на схеме составы списков и общие книги; объясните
+владение составом и сохранённые ссылки. Имена вспомогательных классов и
+методов и устройство демонстрации свободны в пределах файлов для сдачи.
+Подготовка: <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/theory/classes.html#sec-theory-classes-invariant"
+target="_blank" rel="noopener noreferrer">Сохранение инварианта</a>, <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/theory/collections.html#sec-theory-collections-snapshots"
+target="_blank" rel="noopener noreferrer">Общая ссылка, представление,
+копия и снимок</a>, <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/handbook/lists.html#sec-api-lists-factories"
+target="_blank" rel="noopener noreferrer">Конструирование и
+свойства</a>.</p>
+<p>Для сдачи используйте два редактора:
+<code>src/main/java/Catalogue.java</code> и
+<code>src/main/java/course/examples/objects/Book.java</code>. Сохраните
+пакет <code>course.examples.objects</code> у <code>Book</code>, а
+<code>Catalogue</code> оставьте без объявления пакета. Вспомогательные
+классы и методы размещайте в этих файлах.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="src/main/java/Catalogue.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*; import course.examples.objects.Book; public class Catalogue { public Catalogue(List&lt;Book&gt; input){} public void add(Book book){throw new UnsupportedOperationException(&quot;Допишите владельца списка&quot;);} public List&lt;Book&gt; view(){throw new UnsupportedOperationException(&quot;Допишите представление&quot;);} public List&lt;Book&gt; copy(){throw new UnsupportedOperationException(&quot;Допишите копию&quot;);} public List&lt;Book&gt; snapshot(){throw new UnsupportedOperationException(&quot;Допишите снимок&quot;);&#125;&#125;
+</pl-file-editor>
+<pl-file-editor file-name="src/main/java/course/examples/objects/Book.java" ace-mode="ace/mode/java" normalize-to-ascii="false">package course.examples.objects;
+
+public final class Book {
+    private final String title;
+    private boolean borrowed;
+
+    public Book(String title) {
+        if (title == null || title.isBlank()) {
+            throw new IllegalArgumentException(&quot;Название должно содержать хотя бы один непробельный символ&quot;);
+        }
+        this.title = title;
+    }
+
+    public String title() { return title; }
+    public boolean borrowed() { return borrowed; }
+
+    public void borrow() {
+        if (borrowed) {
+            throw new IllegalStateException(&quot;Книга уже выдана&quot;);
+        }
+        borrowed = true;
+    }
+}
+</pl-file-editor>
+</pl-question-panel>

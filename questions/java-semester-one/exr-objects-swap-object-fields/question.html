@@ -1,0 +1,62 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Начальный</p>
+<p>Создайте класс <code>Test</code> с полем <code>int a</code> и
+конструктором <code>Test(int i)</code>, присваивающим полю
+<code>a</code> значение <code>i</code>. Метод
+<code>void swap(Test first, Test second)</code> меняет местами значения
+полей двух ненулевых объектов. Метод может быть статическим или
+экземплярным при сохранении указанных параметров.</p>
+<p>Для разных объектов со значениями 3 и 8 результат — 8 и 3. Ссылки
+вызывающего кода указывают на прежние объекты. При вызове
+<code>swap(x, x)</code> значение <code>x.a</code> сохраняется.
+Вспомогательные переменные и доступ к полям выбирайте
+самостоятельно.</p>
+<p>Предъявите исходники и консольную демонстрацию обмена двух объектов и
+самопередачи. Покажите значения через прежние ссылки и объясните, почему
+перестановка локальных параметров сама по себе не меняет содержимое
+объектов. Остальные имена и способ запуска демонстрации выбирайте
+самостоятельно.</p>
+<h4
+id="pl-7f31b4e0-88fd-53cd-9f22-178fef4df511-вход-для-проверки-1">Вход
+для проверки</h4>
+<p>Сохраняются Test, поле int a, конструктор Test(int) и
+swap(Test,Test). Технический вход стартера создаёт эти объекты, читает
+их текущее a и вызывает обмен. Наблюдаются прежние объекты; имена
+дополнительных getters и static/instance вариант не назначаются.
+Сохраните обязательные объявления входа из стартера; внутреннее
+устройство решения и формат демонстрации выбирайте самостоятельно в
+пределах условия.</p>
+<p>Для сдачи используйте файлы <code>Study.java</code> и
+<code>Test.java</code> из <code>src/main/java</code> стартового проекта.
+Разместите их в двух редакторах без объявления пакета. Вспомогательные
+классы и методы можно определить в этих файлах; демонстрацию можно
+разместить в одном из них, без третьего исходника.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>Два разных объекта.</strong> Создайте <code>Test(3)</code> и
+<code>Test(8)</code> и вызовите <code>swap(x, y)</code>. Через прежние
+ссылки читаются значения <code>8</code> и <code>3</code>.</p>
+<p><strong>Две ссылки на один объект.</strong> После
+<code>swap(x, x)</code> для объекта <code>Test(-2)</code> его значение
+остаётся <code>-2</code>.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;
+/** Входы к вашему решению. Реализуйте модель и алгоритм по условию.
+ * Внутренние имена, пакеты, видимость и наследование свободны. Не заменяйте
+ * настоящую модель отдельным снимком и не скрывайте мутацию копированием во входе.
+ * Законные копии, вычисляемые самим алгоритмом по условию, разрешены. */
+public class Study {
+    /** Верните сам объект исходно обязательного Test(value); пакет и внутреннее расположение свободны. */
+    public static Object create(int value) { throw new UnsupportedOperationException(&quot;TODO: реализуйте решение&quot;); }
+    /** TODO: Сохраняются Test, поле int a, конструктор Test(int) и swap(Test,Test). */
+    public static int value(Object test) { throw new UnsupportedOperationException(&quot;TODO: реализуйте решение&quot;); }
+    /** TODO: Сохраняются Test, поле int a, конструктор Test(int) и swap(Test,Test). */
+    public static void swap(Object first, Object second) { throw new UnsupportedOperationException(&quot;TODO: реализуйте решение&quot;); }
+}
+</pl-file-editor>
+<pl-file-editor file-name="Test.java" ace-mode="ace/mode/java" normalize-to-ascii="false">class Test { int a; Test(int i){throw new UnsupportedOperationException(&quot;TODO: конструктор&quot;);} static void swap(Test first,Test second){throw new UnsupportedOperationException(&quot;TODO: обмен&quot;);&#125;&#125;
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

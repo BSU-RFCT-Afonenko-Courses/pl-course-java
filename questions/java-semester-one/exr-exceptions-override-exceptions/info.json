@@ -1,0 +1,20 @@
+{
+  "uuid": "bed29a10-284e-5a6d-9f6e-1148468a7499",
+  "type": "v3",
+  "title": "Переопределение метода и исключения",
+  "topic": "Java",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

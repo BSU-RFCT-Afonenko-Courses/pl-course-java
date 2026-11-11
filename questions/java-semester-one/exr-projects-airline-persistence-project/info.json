@@ -1,0 +1,25 @@
+{
+  "uuid": "041e9c60-20c9-5b81-9a49-748b5ff1c149",
+  "type": "v3",
+  "title": "Учёт самолётов и сохранение авиапарка",
+  "topic": "Java",
+  "gradingMethod": "External",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": true,
+  "externalGradingOptions": {
+    "image": "ghcr.io/afonenko-course-tools/java25-grader@sha256:89a8651f93b2ae4b9bf522299c60a27043de493a6c5a7d5393c0231e4b791bb8",
+    "timeout": 300,
+    "enableNetworking": false
+  },
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

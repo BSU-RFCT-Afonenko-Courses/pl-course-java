@@ -1,0 +1,57 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Через Stream API постройте коллекцию частот всех кодовых единиц
+UTF-16 в готовой ненулевой строке. Каждая кодовая единица
+<code>char</code> учитывается отдельно, включая пробелы, переводы строк
+и суррогаты; дополнительные ограничения на содержимое строки
+отсутствуют. Пустой текст даёт пустую коллекцию.</p>
+<p>Ключ можно представлять как <code>Character</code> или как целое
+значение кодовой единицы; частота — число её вхождений. Порядок
+перечисления и оформление вывода выберите самостоятельно, сохранив
+однозначность ключей. В <code>"ab a"</code> частоты: <code>a</code> — 2,
+<code>b</code> — 1, пробел — 1. В строке <code>"\uD83D\uDE00"</code> две
+разные кодовые единицы со значениями <code>55357</code> и
+<code>56832</code>, каждая встречается один раз.</p>
+<p>Подготовка: <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/handbook/streams.html#sec-api-streams-char-units"
+target="_blank" rel="noopener noreferrer">Кодовые единицы строки как
+источник</a> и <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/practice/pipelines.html#/sec-practice-pipelines-char-units"
+target="_blank" rel="noopener noreferrer">Источник кодовых
+единиц</a>.</p>
+<p>Покажите повтор, пробел, пустой текст и суррогатную пару. По
+исходнику объясните выбранную единицу подсчёта и применение Stream
+API.</p>
+<h4
+id="pl-d6634dc3-ccb7-5397-bfc8-15b4802b9302-вход-для-воспроизводимой-проверки-5">Вход
+для воспроизводимой проверки</h4>
+<p>Обязательные объявления входа заданы в стартере; сохраните их и
+свяжите со своим решением. Собственные классы, видимость,
+вспомогательные методы и алгоритмы выбирайте в пределах условия. Если
+предметный API уже обеспечивает этот вход, дополнительный класс не
+требуется.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p>Для строки <code>"ab a"</code> коллекция частот содержит ровно три
+ключа: <code>a</code> (кодовая единица <code>97</code>) с частотой
+<code>2</code>, <code>b</code> (<code>98</code>) с частотой
+<code>1</code> и пробел (<code>32</code>) с частотой <code>1</code>.</p>
+<p>Для строки, заданной Java-литералом <code>"\uD83D\uDE00"</code>, в
+коллекции ровно два ключа — кодовые единицы <code>55357</code> и
+<code>56832</code>, каждый с частотой <code>1</code>.</p>
+</section>
+<p>Единственный файл решения — <code>Study.java</code>, без объявления
+пакета. Решение, вспомогательные классы и методы размещайте в нём.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;import java.util.function.*;import java.nio.file.Path;
+/** Связь с собственным решением; модель и алгоритм создайте самостоятельно. */
+public class Study {
+    /** Верните фактическую коллекцию результата подсчёта кодовых единиц char. Тип внутренней коллекции и счётчиков свободен. */
+    public static Object count(String text) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Только раскройте существующие пары char/частота без потерь. Это проекция результата, не повторный подсчёт. */
+    public static Map&lt;Integer,? extends Number&gt; frequencies(Object result) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

@@ -1,0 +1,72 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Это один из двух вариантов обязательного выбора: выполните очередь
+либо «Обобщённый стек».</p>
+<p>Реализуйте <code>GenericQueue&lt;T&gt;</code> фиксированной
+вместимости с операциями
+<code>void put(T value) throws QueueFullException</code> и
+<code>T get() throws QueueEmptyException</code>. Класс, конструктор
+<code>GenericQueue(T[])</code> и обе операции объявите
+<code>public</code>. Исходные файлы оставьте без объявления пакета.</p>
+<p><code>get</code> возвращает и удаляет самый ранний из хранимых
+элементов — порядок FIFO. Вместимость ограничивает число одновременно
+хранимых элементов: извлечение освобождает место для нового добавления.
+Способ размещения элементов в массиве свободен.</p>
+<p>Хранилище — массив <code>T[]</code>, переданный конструктору; его
+положительная длина задаёт вместимость. Новая очередь пуста независимо
+от исходного содержимого массива. Фактический тип компонента массива
+совпадает с аргументом типа очереди: для
+<code>GenericQueue&lt;Number&gt;</code> передаётся
+<code>Number[]</code>. Фактический <code>Integer[]</code> допускает
+запись только ссылок на <code>Integer</code> или <code>null</code>.
+Клиент после передачи не использует массив напрямую и не добавляет
+<code>null</code>. Проверять эти предпосылки программно не
+требуется.</p>
+<p>В заполненной очереди <code>put</code> выбрасывает проверяемое
+<code>QueueFullException</code>, в пустой <code>get</code> — проверяемое
+<code>QueueEmptyException</code>. Определите оба класса исключений как
+открытые проверяемые наследники <code>Exception</code>. Конструктор
+очереди не объявляет проверяемых исключений; каждая операция объявляет
+указанный для неё проверяемый отказ. Дополнительные проверяемые отказы
+операций не вводятся. Отказ сохраняет состояние очереди. Способ
+формирования и текст сообщений исключений свободны. Новые операции сверх
+конструктора, <code>put</code> и <code>get</code> не требуются.</p>
+<p>Предъявите исходники и консольную демонстрацию со строками и целыми
+числами: обработайте оба отказа, покажите порядок до отказа и после
+него, повторное добавление после извлечения из заполненной очереди.
+Объясните связь типов и почему исходное содержимое переданного массива
+не означает заполненность новой очереди. Подготовка к отказам: <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/theory/exceptions.html#sec-theory-exceptions-early-checked"
+target="_blank" rel="noopener noreferrer">Проверяемый отказ
+операции</a>.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>FIFO и освободившееся место.</strong> В очередь на
+<code>String[2]</code> поместите «Лист», «Ветка», извлеките один
+элемент, поместите «Плод» и извлеките остаток. Полная последовательность
+извлечений — «Лист», «Ветка», «Плод».</p>
+<p><strong>Начальная пустота.</strong> Передайте
+<code>Integer[]{42}</code> и сразу вызовите извлечение: новая очередь
+выбрасывает проверяемое <code>QueueEmptyException</code>.</p>
+<p><strong>Отказ полного контейнера.</strong> В очередь на
+<code>Integer[]{42}</code> поместите <code>7</code> и попытайтесь
+добавить <code>8</code>. Возникает проверяемое
+<code>QueueFullException</code>; последующее извлечение возвращает
+прежнюю <code>7</code>.</p>
+<p><strong>Отказ после извлечения.</strong> После помещения и извлечения
+<code>7</code> из очереди на <code>Integer[]{42}</code> повторное
+извлечение выбрасывает проверяемое <code>QueueEmptyException</code>.</p>
+<p><strong>Повторное помещение.</strong> После помещения и извлечения
+<code>7</code> в очереди на <code>Integer[]{42}</code> добавьте
+<code>9</code>. Следующее извлечение возвращает <code>9</code>.</p>
+</section>
+<p>Для сдачи загрузите отдельными файлами
+<code>GenericQueue.java</code>, <code>QueueEmptyException.java</code> и
+<code>QueueFullException.java</code>, без объявления пакета.
+Вспомогательные классы и методы размещайте в этих файлах.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+
+<pl-file-upload file-names="GenericQueue.java,QueueEmptyException.java,QueueFullException.java"></pl-file-upload>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

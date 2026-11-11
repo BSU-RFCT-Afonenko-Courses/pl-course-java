@@ -1,0 +1,41 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Высокий</p>
+<p>Выведите первые <code>N</code> простых чисел в возрастающем порядке.
+Вход <code>N</code> — целое число от <code>0</code> до
+<code>10000</code> включительно. Простое число — целое больше единицы,
+имеющее ровно два положительных делителя: единицу и себя.</p>
+<p>Используйте последовательный Stream API и генератор
+последовательности (<code>iterate</code>, <code>generate</code> или их
+варианты для примитивных потоков). Способ проверки простоты выберите
+самостоятельно. Для <code>N = 5</code> результат
+<code>2 3 5 7 11</code>, для <code>N = 0</code> вывод пуст. Между
+числами допустимы пробелы или переводы строк.</p>
+<p>Предъявите вывод для обычного N и для нуля. Объясните генератор,
+проверку простоты и ограничение числа результатов.</p>
+<h4
+id="pl-a7d32aff-b5f1-57be-8279-f1adc0e04da9-вход-для-воспроизводимой-проверки-11">Вход
+для воспроизводимой проверки</h4>
+<p>Обязательные объявления входа заданы в стартере; сохраните их и
+свяжите со своим решением. Собственные классы, видимость,
+вспомогательные методы и алгоритмы выбирайте в пределах условия. Если
+предметный API уже обеспечивает этот вход, дополнительный класс не
+требуется.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p>При <code>N = 5</code> печатается последовательность
+<code>2, 3, 5, 7, 11</code>. Числа разделяются пробелами или переводами
+строк.</p>
+<p>При <code>N = 0</code> вывод последовательности пуст.</p>
+</section>
+<p>Единственный файл решения — <code>Study.java</code>, без объявления
+пакета. Решение, вспомогательные классы и методы размещайте в нём.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;import java.util.function.*;import java.nio.file.Path;
+/** Связь с собственным решением; модель и алгоритм создайте самостоятельно. */
+public class Study {
+    public static void printPrimes(int n) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

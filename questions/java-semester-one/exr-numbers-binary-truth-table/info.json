@@ -1,0 +1,25 @@
+{
+  "uuid": "c64b7512-81d4-5921-b0a6-c5cd5b4f9b60",
+  "type": "v3",
+  "title": "Таблица истинности со значениями 1 и 0",
+  "topic": "Java",
+  "gradingMethod": "External",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": true,
+  "externalGradingOptions": {
+    "image": "ghcr.io/afonenko-course-tools/java25-grader@sha256:89a8651f93b2ae4b9bf522299c60a27043de493a6c5a7d5393c0231e4b791bb8",
+    "timeout": 300,
+    "enableNetworking": false
+  },
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

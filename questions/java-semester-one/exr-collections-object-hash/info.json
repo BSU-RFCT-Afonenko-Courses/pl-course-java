@@ -1,0 +1,20 @@
+{
+  "uuid": "49f6d6cd-1c2c-586d-be1a-483dd7f0199c",
+  "type": "v3",
+  "title": "Учёт обращений по устойчивому коду",
+  "topic": "Java",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Определите, является ли целочисленное частное положительным, если
+операция допустима. При нулевом делителе результат проверки считается
+ложным.</p>
+<p>Вход и результат: стандартный ввод содержит два числа типа
+<code>int</code>: числитель и делитель. Выведите <code>true</code>, если
+делитель не равен нулю и целочисленное частное положительно; иначе —
+<code>false</code>. Для <code>7 0</code> результат — <code>false</code>
+без исключения, для <code>7 2</code> — <code>true</code>, для
+<code>1 2</code> — <code>false</code>. При пустом вводе
+продемонстрируйте пару <code>7 0</code>.</p>
+<p>Реализуйте условие с помощью <code>&amp;&amp;</code>, чтобы применить
+правило условного вычисления операндов.</p>
+<p>Точка входа — <code>Main.main(String[] args)</code>.</p>
+<p>Покажите нулевой делитель и ненулевой делитель с частным, равным
+нулю. Объясните по исходнику, какой операнд <code>&amp;&amp;</code>
+вычисляется первым и когда деление не выполняется.</p>
+<p>Консольная программа выводит результат без приглашений к вводу. Числа
+разделяются пробельными символами; десятичный разделитель — точка.</p>
+<p>Единственный файл решения — <code>Main.java</code> из
+<code>src/main/java</code>, без объявления пакета. Вспомогательные
+классы и методы можно определить в нём.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p>Без аргументов передайте <code>7 2</code> через стандартный ввод и
+завершите его: результат — <code>true</code>. В отдельном запуске ввод
+<code>7 0</code> даёт <code>false</code> без необработанного исключения
+деления на нуль.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Main.java" ace-mode="ace/mode/java" normalize-to-ascii="false">/**
+ * Безопасная проверка результата целочисленного деления.
+ * Условия ввода, формат вывода и примеры приведены в README.md.
+ * Алгоритм и вспомогательные методы разработайте самостоятельно.
+ */
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // TODO: вычислите условие с помощью &amp;&amp; и выведите результат.
+    }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

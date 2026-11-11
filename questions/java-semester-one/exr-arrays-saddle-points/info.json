@@ -1,0 +1,20 @@
+{
+  "uuid": "7dcb0bf6-04ac-56a6-892f-eec16012e6a2",
+  "type": "v3",
+  "title": "Седловые точки матрицы",
+  "topic": "Java",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

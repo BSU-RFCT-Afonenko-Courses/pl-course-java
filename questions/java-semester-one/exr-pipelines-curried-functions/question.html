@@ -1,0 +1,82 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Высокий</p>
+<p>Каррированная функция принимает первый аргумент и возвращает функцию,
+которая принимает второй. Реализуйте лямбдами три таких операции; выбор
+имён и вспомогательных методов свободен.</p>
+<ol type="1">
+<li>Сложение двух целых чисел: оба аргумента от <code>-1000000</code> до
+<code>1000000</code>, результат — их точная сумма. Например, применение
+первого аргумента <code>7</code> создаёт функцию, которая для
+<code>-2</code> возвращает <code>5</code>. Подойдут
+<code>Function&lt;Integer, Function&lt;Integer, Integer&gt;&gt;</code>
+или эквивалентная форма с примитивными функциональными
+интерфейсами.</li>
+<li>Проверка строки по регулярному выражению: первый аргумент —
+корректное ненулевое регулярное выражение Java, второй — ненулевая
+строка. Проверяется совпадение всей строки, как у
+<code>String.matches</code>. Для шаблона <code>[A-Z]+</code> строка
+<code>"ABC"</code> подходит, <code>"Ab"</code> — нет.</li>
+<li>Разбиение строки: первый аргумент — корректное ненулевое регулярное
+выражение Java, второй — ненулевая строка. Результат соответствует
+<code>String.split(regex, -1)</code>, включая сохранение пустых частей в
+конце. Для <code>","</code> и <code>"a,,b,"</code> результат
+<code>{"a", "", "b", ""}</code>.</li>
+</ol>
+<p>Во всех трёх случаях сохраните полученную после первого аргумента
+функцию и примените её к нескольким вторым аргументам. Пустые строки
+допустимы; некорректные регулярные выражения за пределами входного
+договора.</p>
+<p>Предъявите три лямбда-операции. Для каждой сохраните функцию после
+первого аргумента, покажите несколько её вызовов со вторыми аргументами
+и объясните данные и результат обоих этапов.</p>
+<h4
+id="pl-df82df17-1b15-537c-a1e6-dab076280be1-вход-для-воспроизводимой-проверки-15">Вход
+для воспроизводимой проверки</h4>
+<p>Обязательные объявления входа заданы в стартере; сохраните их и
+свяжите со своим решением. Собственные классы, видимость,
+вспомогательные методы и алгоритмы выбирайте в пределах условия. Если
+предметный API уже обеспечивает этот вход, дополнительный класс не
+требуется.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p>Для каждого первого аргумента сохраняют функцию и применяют её
+дважды. Прибавление <code>7</code> к <code>-2</code> и <code>3</code>
+даёт <code>5</code> и <code>10</code>. Проверка полного совпадения с
+<code>[A-Z]+</code> для <code>"ABC"</code> и <code>"Ab"</code> даёт
+<code>true</code> и <code>false</code>. Разбиение по запятой строк
+<code>"a,,b,"</code> и <code>"x,y"</code> даёт соответственно
+<code>{"a", "", "b", ""}</code> и <code>{"x", "y"}</code>.</p>
+<p>Прибавление <code>-1000000</code> к <code>-1000000</code> и
+<code>1000000</code> даёт <code>-2000000</code> и <code>0</code>.
+Проверка с <code>.*</code> для <code>""</code> и <code>"A"</code> даёт
+<code>true</code> в обоих случаях. Сохранённая функция разбиения по
+запятой для <code>""</code> возвращает массив из одной пустой строки, а
+для <code>","</code> — из двух пустых строк.</p>
+</section>
+<p>Единственный файл решения — <code>Study.java</code>, без объявления
+пакета. Решение, вспомогательные классы и методы размещайте в нём.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;import java.util.function.*;import java.nio.file.Path;
+/** Связь с собственным решением; модель и алгоритм создайте самостоятельно. */
+public class Study {
+    /** Верните настоящую внешнюю каррированную функцию сложения. */
+    public static Object addition() { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Верните настоящую внешнюю функцию: regex -&gt; функция полного сопоставления строки. */
+    public static Object matcher() { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Верните настоящую внешнюю функцию: regex -&gt; функция split(regex,-1). */
+    public static Object splitter() { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Вызовите реальную внешнюю функцию с первым аргументом; верните её фактическую внутреннюю функцию. */
+    public static Object bindAddition(Object outer,int first) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Вызовите реальную внешнюю функцию matcher/splitter с regex; верните её фактический результат. */
+    public static Object bindText(Object outer,String regex) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Вызовите сохранённую внутреннюю функцию со вторым аргументом. */
+    public static int sum(Object bound,int second) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Вызовите сохранённую внутреннюю функцию полного сопоставления. */
+    public static boolean matches(Object bound,String text) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+    /** Вызовите сохранённую внутреннюю функцию разбиения; не выполняйте разбиение во входе проверки. */
+    public static String[] split(Object bound,String text) { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

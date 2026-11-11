@@ -1,0 +1,169 @@
+{
+  "uuid": "5f70c5f6-4f87-5f4e-ba0c-e8fdb6670ab6",
+  "type": "Homework",
+  "title": "Полиморфизм",
+  "set": "Homework",
+  "number": "6",
+  "maxPoints": 70,
+  "text": "<p>Покажите использование разных реализаций через общий интерфейс и\nобъясните выбор переопределённого метода.</p>\n<p>Теория: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/inheritance.html#sec-theory-inheritance\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 12</a> и <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/interfaces.html#sec-theory-interfaces\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 13</a>. API: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/inheritance.html#sec-api-inheritance\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 9</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/interfaces.html#sec-api-interfaces\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 10</a>. Очереди: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/polymorphism.html#sec-bank-character-queues\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Очереди символов</a>.\nВведение: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/practice/polymorphism.html#/sec-practice-polymorphism\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Общая операция</a>.</p>\n<h2\nid=\"pl-714bca92-8d0c-5149-ab54-1738fd60a251-предъявление-и-объяснение\">Предъявление\nи объяснение</h2>\n<p>Покажите вызов <code>area()</code> через <code>TwoDShape</code>,\nоперации через <code>IVehicle</code>, сохранение характеристик после\nотказа метода изменения и выбор голоса через <code>Animal</code>.</p>\n<p>В выбранном задании об очередях покажите общий интерфейсный клиент\nдля трёх реализаций. <code>FixedQueue</code> сохраняет использованные\nпозиции до сброса, <code>CircularQueue</code> использует их повторно,\n<code>DynQueue</code> растёт. Объясните, как клиент учитывает эти\nразличия и почему может принять новую реализацию без новой ветви\n<code>instanceof</code>. Укажите, почему для <code>DynQueue</code> не\nтребуется показывать отказ переполнения.</p>\n<p>Для сброса существенны пустое состояние, отсутствие прежних символов\nи сохранение текущей ёмкости, включая увеличенную. Для переноса нужны\nразные ненулевые объекты, известное значение <code>count</code> и пустой\nприёмник, допускающий <code>count</code> успешных помещений. В линейной\nочереди учитываются оставшиеся неиспользованные позиции. После переноса\nисточник пуст, а приёмник сохраняет порядок. Отказы и вывод операций\nопределены в общем договоре очередей.</p>\n<p>Представьте исходные Java-файлы и демонстрацию обычных и существенных\nграничных случаев. Устройство реализации свободно в пределах договора;\nдля очередей обязательны интерфейсный клиент и закрытое массивное\nFIFO-хранение. Эти приёмы проверяются по исходнику, объяснение — в\nбеседе с преподавателем. Среда проверки — JDK 25.</p>\n<h2 id=\"pl-714bca92-8d0c-5149-ab54-1738fd60a251-условия-задач\">Условия\nзадач</h2>\n<p>Полные условия и общие правила находятся в темах банка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/polymorphism.html#sec-bank-polymorphism\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Полиморфизм</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/exceptions.html#sec-bank-exceptions\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Исключения</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/projects.html#sec-bank-projects\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Учебные приложения</a>.</p>\n<div\nid=\"pl-714bca92-8d0c-5149-ab54-1738fd60a251-3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9\"\nclass=\"hidden\">\n\n</div>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Полиморфизм",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-polymorphism-circle-subclass",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-polymorphism-vehicle-interface",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-polymorphism-animal-hierarchy",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Выполните одну из задач",
+      "bestQuestions": 1,
+      "questions": [
+        {
+          "id": "java-semester-one/exr-polymorphism-reset-character-queues",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-polymorphism-copy-character-queues",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Полиморфизм",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-polymorphism-fraction-number-subclass",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-exceptions-constructor-checked-exception",
+          "autoPoints": 0,
+          "manualPoints": 10,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-exceptions-override-exceptions",
+          "autoPoints": 0,
+          "manualPoints": 10,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Добровольные задания",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-polymorphism-truck-subclass",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-polymorphism-queue-package",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-polymorphism-circular-dynamic-queue",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-polymorphism-compatible-queue-reset",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-projects-timetable-interfaces-project",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        }
+      ]
+    }
+  ]
+}

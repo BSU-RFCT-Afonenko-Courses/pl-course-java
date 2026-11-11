@@ -1,0 +1,20 @@
+{
+  "uuid": "3d7eabef-048a-59d2-a8fb-966dd3bd46a9",
+  "type": "v3",
+  "title": "Конструктор подкласса и проверяемое исключение",
+  "topic": "Java",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

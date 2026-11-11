@@ -1,0 +1,25 @@
+{
+  "uuid": "0fa385ee-feac-5d5e-932d-0ea945e0a45c",
+  "type": "v3",
+  "title": "Вычёркивание каждого второго",
+  "topic": "Java",
+  "gradingMethod": "External",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": true,
+  "externalGradingOptions": {
+    "image": "ghcr.io/afonenko-course-tools/java25-grader@sha256:89a8651f93b2ae4b9bf522299c60a27043de493a6c5a7d5393c0231e4b791bb8",
+    "timeout": 300,
+    "enableNetworking": false
+  },
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

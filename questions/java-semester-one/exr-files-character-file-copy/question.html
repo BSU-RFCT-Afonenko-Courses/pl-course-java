@@ -1,0 +1,70 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Напишите консольную программу, которая получает два аргумента — пути
+входного и выходного файлов — и копирует текст с заменой пробела U+0020
+на дефис U+002D. Вход — конечный допустимый UTF-8-текст, включая пустой
+файл. Используйте <code>Reader</code> и <code>Writer</code> с явно
+выбранной кодировкой UTF-8 и try-with-resources. Остальные символы
+сохраняются, включая табуляции, переводы строк и отсутствие перевода
+после последней строки.</p>
+<p>Относительные пути разрешаются от рабочего каталога процесса.
+Откройте вход прежде выхода. Отсутствующий выход создаётся, существующий
+перезаписывается. Если оба пути обозначают один существующий файл,
+отклоните операцию до открытия выхода и сохраните вход; учитывайте
+идентичность файла, включая разные записи пути к нему. Во время проверки
+файлы не меняются извне. Отсутствие входа сохраняет прежний выход и не
+создаёт новый. При отказе записи возможен частичный результат. Сообщите
+причину отказа; сообщение об успешном копировании допустимо только после
+успешного завершения.</p>
+<p>Допустимо читать по одному символу или порциями в буфер. Имена
+классов и вспомогательных методов, текст и канал диагностики, а также
+коды завершения выберите самостоятельно.</p>
+<p>Для входа <code>Java text\nвторая строка</code> результат —
+<code>Java-text\nвторая-строка</code>; здесь <code>\n</code> обозначает
+перевод строки, после последнего слова его нет. Покажите также пустой
+файл, табуляцию, разные разделители строк, отсутствующий вход при
+существующем выходе и отказ самокопирования. Предъявите исходник с
+try-with-resources и оба файла для сравнения. Подготовка: <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/handbook/files.html#sec-api-files-operations"
+target="_blank" rel="noopener noreferrer">Чтение и запись</a>, <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/theory/resources.html#sec-theory-resources-autocloseable"
+target="_blank" rel="noopener noreferrer">Интерфейс
+AutoCloseable</a>.</p>
+<h4
+id="pl-274bbbdd-4b37-5e31-b452-c26a1b9dd199-вход-для-воспроизводимой-проверки-1">Вход
+для воспроизводимой проверки</h4>
+<p>Сохраните обязательные сигнатуры входов из стартера. Они связывают
+проверку с вашим решением; наблюдаются его фактические действия и
+результаты. Формат отчёта и диагностики выбирайте в пределах
+условия.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p>Входной UTF-8-текст <code>A B\tC\u00A0D\r\nE F</code> копируется в
+ещё не существующий выходной файл как <code>A-B\tC\u00A0D\r\nE-F</code>.
+Здесь <code>\t</code> обозначает табуляцию, <code>\u00A0</code> —
+неразрывный пробел, <code>\r\n</code> — CRLF; после <code>F</code>
+перевода строки нет. Вход сохраняется, меняются только обычные пробелы
+U+0020.</p>
+<p>В рабочем каталоге файл <code>text.txt</code> содержит
+<code>A B</code> без конечного LF. Аргументы <code>text.txt</code> и
+<code>./text.txt</code> обозначают один файл. Программа отклоняет такое
+копирование до усечения, объясняет отказ и сохраняет <code>A B</code>;
+сообщение об успехе не появляется.</p>
+</section>
+<p>Для сдачи используйте два редактора: <code>Copy.java</code> и
+<code>Study.java</code>, без объявления пакета. Сохраните объявления
+входа из стартера; вспомогательные классы и методы размещайте в этих
+файлах.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Copy.java" ace-mode="ace/mode/java" normalize-to-ascii="false">public class Copy {public static void main(String[]args){throw new UnsupportedOperationException(&quot;TODO: копирование и диагностика&quot;);&#125;&#125;
+</pl-file-editor>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;import java.util.function.*;import java.nio.file.Path;
+/** Связь с собственным решением; модель и алгоритм создайте самостоятельно. */
+public class Study {
+    /** Верните настоящий класс вашей консольной программы. Ему передаются два исходных пути без изменения; запуск изолирован. Класс программы разместите в Copy.java без package; допустимая форма main и код завершения свободны. */
+    public static Class&lt;?&gt; entryPoint() { throw new UnsupportedOperationException(&quot;TODO: реализуйте по условию&quot;); }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

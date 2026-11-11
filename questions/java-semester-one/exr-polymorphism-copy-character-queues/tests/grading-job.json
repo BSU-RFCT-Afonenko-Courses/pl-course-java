@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "sourceFiles": [
+    "CircularQueue.java",
+    "DynQueue.java",
+    "FixedQueue.java",
+    "ICharQ.java",
+    "Study.java"
+  ],
+  "testFiles": [
+    "src/api/java/ApiContract.java",
+    "src/api/java/org/prairielearn/api/PlatformApiPrecheck.java",
+    "src/test/java/CharDomainTest.java",
+    "src/test/java/ContractTest.java",
+    "src/test/java/PublicChecks.java",
+    "src/test/java/PublicExamplesTest.java",
+    "src/test/java/TaskBinding.java",
+    "src/test/java/ZeroTransferStateTest.java"
+  ],
+  "mode": "implementation",
+  "runtime": "java25-gradle-junit-v1",
+  "java": {
+    "release": 25,
+    "encoding": "UTF-8",
+    "compiler-options": [
+      "-proc:none",
+      "-Xmaxerrs",
+      "5"
+    ]
+  },
+  "limits": {
+    "outer-seconds": 300,
+    "compile-seconds": 120,
+    "run-seconds": 30,
+    "networking": false,
+    "max-output-bytes": 65536
+  },
+  "scoring": {
+    "mode": "weighted"
+  },
+  "discovery": {
+    "min-executed": 1,
+    "allow-skipped": false
+  },
+  "additionalJavaSources": {
+    "archive": "additional-sources.zip",
+    "maxFiles": 128,
+    "maxFileBytes": 1048576,
+    "maxTotalBytes": 4194304,
+    "maxArchiveBytes": 2097152,
+    "primaryRequired": true,
+    "allowAdditional": false
+  },
+  "javaBuild": {
+    "kind": "gradle-jar-v1",
+    "artifact": "submission.jar"
+  },
+  "apiPrecheck": {
+    "files": [
+      "src/api/java/ApiContract.java",
+      "src/api/java/org/prairielearn/api/PlatformApiPrecheck.java"
+    ],
+    "entry": "ApiContract"
+  }
+}

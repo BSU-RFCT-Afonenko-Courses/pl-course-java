@@ -1,0 +1,43 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Даны классы <code>A</code> и <code>B</code>: конструктор
+<code>A()</code> объявлен с <code>throws IOException</code>, а класс
+<code>B extends A</code> пока не содержит собственного конструктора.
+Добавьте в <code>B</code> конструктор, при котором оба класса
+компилируются. Покажите два допустимых варианта объявления в двух
+независимых версиях программы и добавьте вызывающий код, обрабатывающий
+объявленное проверяемое исключение.</p>
+<p>Сохраните заданный <code>A()</code> и наследование
+<code>B extends A</code>. Имена дополнительных классов и параметры
+добавляемых конструкторов выберите самостоятельно. Предъявите обе версии
+и результаты их раздельной компиляции; объясните, как объявление
+конструктора связано с обработкой исключения у вызывающего кода.
+Определённый вывод программы не требуется.</p>
+<p>Для сдачи используйте два редактора:
+<code>cases/io/src/main/java/Version.java</code> и
+<code>cases/broad/src/main/java/Version.java</code> для двух вариантов.
+Варианты компилируются независимо; дополнительные классы размещайте в
+соответствующем файле без объявления пакета.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="cases/broad/src/main/java/Version.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.io.IOException;
+// Эта программа компилируется отдельно от второй версии.
+class A { A() throws IOException {} }
+class B extends A {
+    // TODO: добавьте допустимый конструктор этой версии.
+}
+class Version {
+    // TODO: добавьте вызывающий код и обработку проверяемого исключения.
+}
+</pl-file-editor>
+<pl-file-editor file-name="cases/io/src/main/java/Version.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.io.IOException;
+// Эта программа компилируется отдельно от второй версии.
+class A { A() throws IOException {} }
+class B extends A {
+    // TODO: добавьте допустимый конструктор этой версии.
+}
+class Version {
+    // TODO: добавьте вызывающий код и обработку проверяемого исключения.
+}
+</pl-file-editor>
+</pl-question-panel>

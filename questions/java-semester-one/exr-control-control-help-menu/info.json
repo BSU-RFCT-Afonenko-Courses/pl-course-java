@@ -1,0 +1,20 @@
+{
+  "uuid": "360b8fb9-626a-5390-bafb-b249e1ff7f7e",
+  "type": "v3",
+  "title": "Справочная система по управляющим операторам",
+  "topic": "Java",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

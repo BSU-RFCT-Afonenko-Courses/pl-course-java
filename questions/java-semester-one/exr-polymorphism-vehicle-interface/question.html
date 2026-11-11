@@ -1,0 +1,76 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Создайте класс <code>Vehicle</code> с закрытыми целочисленными
+характеристиками <code>passengers</code> (число пассажиров),
+<code>fuelcap</code> (запас топлива в галлонах), <code>mpg</code> (мили
+на галлон). Число пассажиров неотрицательно; два остальных значения
+положительны. Открытый конструктор
+<code>Vehicle(int passengers, int fuelcap, int mpg)</code> создаёт это
+состояние.</p>
+<p>Выделите в <code>IVehicle</code> следующие операции и реализуйте их
+открытыми методами <code>Vehicle</code>:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> <span class="fu">getPassengers</span><span class="op">();</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> <span class="fu">setPassengers</span><span class="op">(</span><span class="dt">int</span> value<span class="op">);</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> <span class="fu">getFuelcap</span><span class="op">();</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> <span class="fu">setFuelcap</span><span class="op">(</span><span class="dt">int</span> value<span class="op">);</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> <span class="fu">getMpg</span><span class="op">();</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> <span class="fu">setMpg</span><span class="op">(</span><span class="dt">int</span> value<span class="op">);</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> <span class="fu">range</span><span class="op">();</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> <span class="fu">fuelNeeded</span><span class="op">(</span><span class="dt">int</span> miles<span class="op">);</span></span></code></pre></div>
+<p>Методы доступа читают и изменяют характеристики с сохранением
+ограничений. Дальность равна <code>fuelcap * mpg</code>; исходные данные
+и допустимые изменения выбираются так, чтобы произведение помещалось в
+<code>int</code>. Обработка переполнения вне условия.</p>
+<p><code>fuelNeeded(int miles)</code> возвращает <code>double</code>:
+отношение неотрицательного расстояния <code>miles</code> к
+<code>mpg</code>. Абсолютная погрешность не больше <code>1e-6</code>.
+Неверные параметры конструктора, метода изменения и отрицательное
+расстояние отклоняются через <code>IllegalArgumentException</code>.
+Метод изменения проверяет значение до записи: после отказа все
+характеристики прежние. Конструктор частью интерфейса не является.</p>
+<p>Предъявите исходники и консольную демонстрацию чтения, изменения и
+вычислений через <code>IVehicle</code>. Для
+<code>Vehicle(2, 10, 25)</code> дальность 250, топливо для 50 миль 2.0.
+Покажите отказ <code>setFuelcap(0)</code> с сохранением характеристик и
+дальности 250; отдельно — исключение для отрицательного расстояния.
+Вспомогательные методы и способ запуска свободны в пределах указанного
+API.</p>
+<h4
+id="pl-7fbf072d-1b49-5839-83a5-e3d98890833a-вход-для-воспроизводимой-проверки-1">Вход
+для воспроизводимой проверки</h4>
+<p>Обязательные объявления входа заданы в стартере; сохраните их и
+свяжите со своим решением. Собственные классы, видимость,
+вспомогательные методы и алгоритмы выбирайте в пределах условия. Если
+предметный API уже обеспечивает этот вход, дополнительный класс не
+требуется.</p>
+<p>Для сдачи используйте файлы <code>IVehicle.java</code> и
+<code>Vehicle.java</code> из <code>src/main/java</code> стартового
+проекта. Разместите их в двух редакторах без объявления пакета.
+Вспомогательные классы и методы можно определить в этих файлах;
+демонстрацию можно разместить в одном из них, без третьего
+исходника.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>Чтение и допустимое изменение.</strong> У
+<code>Vehicle(2, 10, 25)</code> характеристики равны
+<code>(2, 10, 25)</code>, дальность — <code>250</code>, расход для
+<code>50</code> миль — <code>2.0</code>. Через интерфейс измените
+характеристики на <code>(0, 12, 30)</code>: дальность станет
+<code>360</code>, расход для <code>90</code> миль — <code>3.0</code>.
+Абсолютная погрешность расхода не превышает <code>1e-6</code>.</p>
+<p><strong>Отказ изменения и отрицательного расстояния.</strong> Для
+нового <code>Vehicle(2, 10, 25)</code> вызовы <code>setFuelcap(0)</code>
+и <code>fuelNeeded(-1)</code> вызывают
+<code>IllegalArgumentException</code>. Характеристики остаются
+<code>(2, 10, 25)</code>, дальность — <code>250</code>, а
+<code>fuelNeeded(0)</code> возвращает <code>0.0</code>.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="IVehicle.java" ace-mode="ace/mode/java" normalize-to-ascii="false">public interface IVehicle {int getPassengers();void setPassengers(int v);int getFuelcap();void setFuelcap(int v);int getMpg();void setMpg(int v);int range();double fuelNeeded(int miles);}
+</pl-file-editor>
+<pl-file-editor file-name="Vehicle.java" ace-mode="ace/mode/java" normalize-to-ascii="false">public class Vehicle implements IVehicle {private int passengers,fuelcap,mpg;public Vehicle(int passengers,int fuelcap,int mpg){throw new UnsupportedOperationException(&quot;TODO: допустимое состояние&quot;);}public int getPassengers(){throw new UnsupportedOperationException(&quot;TODO: getPassengers&quot;);}public int getFuelcap(){throw new UnsupportedOperationException(&quot;TODO: getFuelcap&quot;);}public int getMpg(){throw new UnsupportedOperationException(&quot;TODO: getMpg&quot;);}public void setPassengers(int value){throw new UnsupportedOperationException(&quot;TODO: setPassengers&quot;);}public void setFuelcap(int value){throw new UnsupportedOperationException(&quot;TODO: setFuelcap&quot;);}public void setMpg(int value){throw new UnsupportedOperationException(&quot;TODO: setMpg&quot;);}public int range(){throw new UnsupportedOperationException(&quot;TODO: range&quot;);}public double fuelNeeded(int miles){throw new UnsupportedOperationException(&quot;TODO: fuelNeeded&quot;);&#125;&#125;
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

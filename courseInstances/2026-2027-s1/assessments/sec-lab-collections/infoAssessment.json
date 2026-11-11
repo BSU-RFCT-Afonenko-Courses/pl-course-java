@@ -1,0 +1,187 @@
+{
+  "uuid": "eb9f17fb-4f17-5631-b3b5-4cbebb4c4bb3",
+  "type": "Homework",
+  "title": "Коллекции",
+  "set": "Homework",
+  "number": "8",
+  "maxPoints": 80,
+  "text": "<p>Для входа <code>s17, s18, s17</code> журнал хранит три обращения,\nмножество — два кода, карта — частоты 2 и 1. Постройте такой учёт с\nсобственным типом ключа. В задаче о книгах разделите изменение состава\nсписка и состояние общей книги. Затем получите результаты операций над\nмножествами и выберите один алгоритм со стеком или картой.</p>\n<p>Равенство и устойчивость ключа: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/equality.html#sec-theory-equality-domain\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Равенство записи и\nуникальность кода</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/equality.html#sec-theory-equality-hash\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Равенство и хеш</a>. Общие\nэлементы и разные составы: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/collections.html#sec-theory-collections-snapshots\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Общая ссылка, представление,\nкопия и снимок</a>. Введение: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/practice/collections.html#/sec-practice-collections\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Коллекции</a>.</p>\n<p>Адресная справка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/sets-maps.html#sec-api-sets-maps-set\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Множества</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/sets-maps.html#sec-api-sets-maps-bulk\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Групповые операции\nмножеств</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/sets-maps.html#sec-api-sets-maps-map\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Карты</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/lists.html#sec-api-lists-factories\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Конструирование и\nсвойства</a>. Для выбранного скобочного алгоритма: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/sets-maps.html#sec-api-sets-maps-queue\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Очереди</a>.</p>\n<h2\nid=\"pl-ff6f3eb9-9b60-53b2-b230-e8106464f017-представление-решения\">Представление\nрешения</h2>\n<p>Представьте исходные Java-файлы и продемонстрируйте обычные и\nграничные случаи из условий. Учёт должен обрабатывать произвольный\nмассив кодов; покажите повторные обращения и поиск отдельным равным\nключом. Для своего владельца списка отдельно объясните защиту входного\nсостава, живое представление, изменяемую копию и снимок. Изменение общей\nкниги проследите отдельно от добавления второй книги.</p>\n<p>Пересечение и объединение сохраняют оба входных множества. Для скобок\nобязателен стек; для сложения многочленов — <code>HashMap</code>, с\nчисловым договором из карточки. Имена свободных методов, классы\nдемонстрации в разрешённых файлах и формат показа результатов выбирайте\nсамостоятельно. Техника проверяется по исходнику, объяснение — в беседе\nс преподавателем. Используется JDK 25; отдельный большой отчёт не\nтребуется.</p>\n<h2 id=\"pl-ff6f3eb9-9b60-53b2-b230-e8106464f017-условия-задач\">Условия\nзадач</h2>\n<p>Полные условия и общие правила находятся в темах банка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/collections.html#sec-bank-collections\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Коллекции</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/projects.html#sec-bank-projects\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Учебные приложения</a>.</p>\n<div\nid=\"pl-ff6f3eb9-9b60-53b2-b230-e8106464f017-3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9\"\nclass=\"hidden\">\n\n</div>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Коллекции",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-collections-object-hash",
+          "autoPoints": 0,
+          "manualPoints": 10,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-collections-views-snapshots",
+          "autoPoints": 0,
+          "manualPoints": 10,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-collections-set-union-intersection",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Выполните одну из задач",
+      "bestQuestions": 1,
+      "questions": [
+        {
+          "id": "java-semester-one/exr-collections-balanced-brackets",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-collections-polynomial-map-addition",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Коллекции",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-collections-digit-stack",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-collections-distinct-word-set",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-collections-word-frequency",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-collections-partition-list",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Добровольные задания",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-collections-poem-line-order",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-collections-elimination-circle",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-collections-graph-model",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-collections-nearest-value",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-collections-polynomial-list-multiplication",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-projects-huffman-word-coding-project",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        }
+      ]
+    }
+  ]
+}

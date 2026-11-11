@@ -1,0 +1,142 @@
+{
+  "uuid": "b61a155f-7ea3-5dfa-b301-72a4656ace98",
+  "type": "Homework",
+  "title": "Классы",
+  "set": "Homework",
+  "number": "5",
+  "maxPoints": 50,
+  "text": "<p>Классы хранят состояние, выполняют действия над ним и поддерживают\nзаданные условия корректности. При демонстрации изменяющих операций\nпроследите, какие объекты видят вызывающий код и другие владельцы\nссылок.</p>\n<p>Теория: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/objects.html#sec-theory-objects\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 10</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/classes.html#sec-theory-classes\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 11</a>. API: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/classes.html#sec-api-classes\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 8</a>. Введение: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/practice/objects.html#/sec-practice-objects\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Классы</a>.</p>\n<h2\nid=\"pl-74ccaf11-c87c-55f2-b0c8-0166cb9c0f70-предъявление-и-объяснение\">Предъявление\nи объяснение</h2>\n<p>Покажите sum без аргументов, swap двух объектов и самопередачу,\nзаполнение и оба отказа Stack, отбор без совпадений и на границе\nгода/цены. Точные сигнатуры и сообщения задаёт каждая карточка;\nвспомогательные методы для демонстрации не обязательны.</p>\n<p>Способ обхода и отбора выбирайте самостоятельно в пределах условий.\nТребуемые классы, два конструктора моделей, методы, закрытый массив\nстека и порядок LIFO сохраняются. Объясните на ёмкости 2, почему отказ\nтретьего push не меняет вершину и последующие pop дают B, A. Выберите\nодно содержательное решение для обсуждения на защите. Дополнительный\nписьменный отчёт не требуется.</p>\n<p>Представьте исходные Java-файлы и демонстрацию обычных и существенных\nграничных случаев. Среда проверки — JDK 25. Обязательные приёмы\nпроверяются по исходнику, объяснение — в беседе с преподавателем.</p>\n<h2 id=\"pl-74ccaf11-c87c-55f2-b0c8-0166cb9c0f70-условия-задач\">Условия\nзадач</h2>\n<p>Полные условия и общие правила находятся в темах банка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/objects.html#sec-bank-objects\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Классы</a>.</p>\n<div\nid=\"pl-74ccaf11-c87c-55f2-b0c8-0166cb9c0f70-3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9\"\nclass=\"hidden\">\n\n</div>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Классы",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-objects-variadic-sum",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-objects-swap-object-fields",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-objects-character-stack",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Выполните одну из задач",
+      "bestQuestions": 1,
+      "questions": [
+        {
+          "id": "java-semester-one/exr-objects-book-selection",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-objects-car-selection",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Классы",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-objects-rational-fractions",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Добровольные задания",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-objects-customer-registry",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-objects-patient-registry",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-objects-complex-values",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-objects-recursive-string-reversal",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Высокий</p>
+<p>Поместите <code>ICharQ</code> и три реализации из <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/polymorphism.html#sec-bank-character-queues"
+target="_blank" rel="noopener noreferrer">Очереди символов</a> в пакет
+<code>qpack</code>. Демонстрационный класс <code>IQDemo</code> оставьте
+в безымянном пакете.</p>
+<p>Сделайте необходимые типы, конструкторы и операции доступными извне
+пакета. Покажите импорт, создание всех трёх очередей и вызовы через
+<code>ICharQ</code>. Представьте структуру Java-файлов и команды
+компиляции и запуска.</p>
+<p>Предъявите исходники и объясните, какие объявления делают очереди
+доступными для <code>IQDemo</code>. Общий договор очередей входит в
+стартовый комплект.</p>
+<p><a
+href="{{options.client_files_question_url}}/test-support/shared/d086641fede1/character-queues.md"
+target="_blank" rel="noopener noreferrer">Очереди символов</a></p>
+<h4
+id="pl-ec9575c0-f31b-53ae-83e9-5d251eb13a8b-вход-для-воспроизводимой-проверки-4">Вход
+для воспроизводимой проверки</h4>
+<p>Обязательные объявления входа заданы в стартере; сохраните их и
+свяжите со своим решением. Собственные классы, видимость,
+вспомогательные методы и алгоритмы выбирайте в пределах условия. Если
+предметный API уже обеспечивает этот вход, дополнительный класс не
+требуется.</p>
+<p>Для сдачи подготовьте один ZIP из исходников
+<code>src/main/java</code>: в корне архива разместите
+<code>IQDemo.java</code>, а в каталоге <code>qpack</code> —
+<code>ICharQ.java</code>, <code>FixedQueue.java</code>,
+<code>CircularQueue.java</code> и <code>DynQueue.java</code>. Сохраните
+пакет <code>qpack</code> для четырёх файлов очередей;
+<code>IQDemo.java</code> остаётся без пакета. Вспомогательные классы и
+методы можно определить внутри этих файлов.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>Три очереди из пакета.</strong> Для каждой из
+<code>FixedQueue(2)</code>, <code>CircularQueue(2)</code>,
+<code>DynQueue(2)</code> поместите <code>A</code>, <code>B</code> и
+выполните два извлечения. Каждая возвращает <code>A</code>, затем
+<code>B</code>; операции молчат.</p>
+<p><strong>Линейное место после извлечения.</strong> Для каждой очереди
+ёмкости <code>2</code> поместите <code>A</code>, <code>B</code>,
+извлеките <code>A</code> и попытайтесь поместить <code>C</code>.
+<code>FixedQueue</code> отказывает в помещении <code>C</code>, и её
+остаток — <code>B</code>. Кольцевая и динамическая очереди возвращают
+остаток <code>B</code>, <code>C</code>. После опустошения
+<code>get()</code> каждой очереди печатает «Очередь пуста» и возвращает
+<code>\0</code>.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<p>Загрузите один ZIP со всеми исходниками, сохранив перечисленные относительные пути внутри архива.</p>
+
+<pl-file-upload file-names="solution.zip"></pl-file-upload>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

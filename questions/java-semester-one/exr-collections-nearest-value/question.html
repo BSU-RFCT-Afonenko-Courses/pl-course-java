@@ -1,0 +1,67 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Высокий</p>
+<p>На базе коллекций реализуйте хранение чисел с добавлением, удалением
+и поиском ближайшего к запросу. В этой задаче хранимые значения и
+запросы — конечные <code>double</code> с модулем не больше
+<code>1e150</code>. Расстоянием считается результат Java-выражения
+<code>Math.abs(value - query)</code>; указанная граница исключает
+переполнение разности. Выберите хранимое значение с наименьшим таким
+расстоянием; при равенстве вычисленных расстояний — меньшее по
+<code>Double.compare</code>. Правило применяется ко всем хранимым
+значениям, включая случаи, когда округление даёт одинаковое расстояние
+для разных чисел.</p>
+<p>Дубликат определяется результатом
+<code>Double.compare(a, b) == 0</code>: повторное добавление сохраняет
+состав, удаление отсутствующего числа также сохраняет его.
+<code>-0.0</code> и <code>+0.0</code> различаются; при равном расстоянии
+выбирается <code>-0.0</code>. Для пустого хранилища верните
+<code>OptionalDouble.empty()</code>, для непустого — выбранное число в
+<code>OptionalDouble</code>. Покажите поиск по обе стороны от запроса,
+равные расстояния и отсутствие элементов. Имена методов и устройство
+хранилища свободны; ограничение стоимости поиска не задаётся.</p>
+<p>Предъявите исходник и наблюдения поиска. Объясните сравнение
+вычисленных расстояний, правило ничьей через Double.compare и результат
+для пустого хранилища.</p>
+<h4
+id="pl-301b64bd-10ed-5399-8d73-302da14b960a-вход-для-проверки-10">Вход
+для проверки</h4>
+<p>Входы стартера создают ваше хранилище и вызывают добавление, удаление
+и поиск. Ближайшее определяется среди всех значений по вычисленному в
+Java Math.abs(value-query); равные вычисленные расстояния разрешаются
+через меньшее значение по Double.compare. Сравнение выполняется без
+нового допуска. Сигнатуры входа из стартера обязательны.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>По обе стороны и на равном расстоянии.</strong> Добавьте
+<code>2</code>, <code>8</code> и выполните запросы для <code>3</code>,
+<code>7</code>, <code>5</code>. Результаты <code>OptionalDouble</code>
+содержат соответственно <code>2</code>, <code>8</code>,
+<code>2</code>.</p>
+<p><strong>Равенство вычисленных расстояний.</strong> Добавьте
+<code>-100</code>, <code>0</code>, <code>100</code> и выполните запрос
+для <code>1e150</code>. Результат <code>OptionalDouble</code> содержит
+<code>-100</code>: выбирается минимальное значение среди всех значений с
+равными вычисленными расстояниями.</p>
+</section>
+<p>Сдайте <code>Study.java</code> без объявления пакета, сохранив
+объявления входа из стартера.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;
+/** Входы к вашему решению. Реализуйте модель и алгоритм по условию.
+ * Вспомогательные типы, видимость и наследование допустимы внутри фиксированного комплекта; сохраняйте заданные пути и package. Не заменяйте
+ * настоящую модель отдельным снимком и не скрывайте мутацию копированием во входе.
+ * Законные копии, вычисляемые самим алгоритмом по условию, разрешены. */
+public class Study {
+    /** Верните само ваше коллекционное хранилище. */
+    public static Object create() { throw new UnsupportedOperationException(&quot;TODO: реализуйте решение&quot;); }
+    /** TODO: Входы стартера создают ваше хранилище и вызывают добавление, удаление и поиск. */
+    public static void add(Object storage, double value) { throw new UnsupportedOperationException(&quot;TODO: реализуйте решение&quot;); }
+    /** TODO: Входы стартера создают ваше хранилище и вызывают добавление, удаление и поиск. */
+    public static void remove(Object storage, double value) { throw new UnsupportedOperationException(&quot;TODO: реализуйте решение&quot;); }
+    /** Верните настоящий результат поиска. Сравнивайте ВСЕ вычисленные Math.abs(value-query), включая округлённые ничьи; затем Double.compare. -0.0 и +0.0 различны, при ничьей выбирается -0.0; пустое хранилище даёт OptionalDouble.empty(). */
+    public static OptionalDouble nearest(Object storage, double query) { throw new UnsupportedOperationException(&quot;TODO: реализуйте решение&quot;); }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

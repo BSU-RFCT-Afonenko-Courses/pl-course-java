@@ -1,0 +1,50 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Для целых <code>n</code>, <code>m</code>, <code>k</code>, где
+<code>n &lt; m</code>, определите принадлежность <code>k</code> каждому
+из интервалов <code>(n, m]</code>, <code>[n, m)</code>,
+<code>(n, m)</code>, <code>[n, m]</code>. Круглая скобка исключает
+соответствующую границу, квадратная включает её.</p>
+<p>Стандартный ввод содержит <code>n m k</code> типа <code>int</code>,
+разделённые пробельными символами. Вход корректен, условие
+<code>n &lt; m</code> выполняется. Вывод должен содержать только четыре
+значения <code>true</code> или <code>false</code> в указанном порядке,
+разделённые пробельными символами.</p>
+<p>Для <code>-2 4 -2</code> результат —
+<code>false true false true</code>; для <code>-2 4 4</code> —
+<code>true false false true</code>.</p>
+<p>Используйте JDK 25. Точка входа —
+<code>Main.main(String[] args)</code>. Способ вычисления,
+вспомогательные методы и разбиение программы выберите
+самостоятельно.</p>
+<p>Представьте исходники и покажите обе границы, внутреннюю точку и
+значения снаружи интервалов. Объясните, как строгость сравнения
+определяет результат на границе.</p>
+<p>Единственный файл решения — <code>Main.java</code> из
+<code>src/main/java</code>, без объявления пакета. Вспомогательные
+классы и методы можно определить в нём.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p>Без аргументов передайте <code>n m k</code> через стандартный ввод и
+завершите его. При <code>-2 4 -2</code> получаются
+<code>false true false true</code>, при <code>-2 4 4</code> —
+<code>true false false true</code>, при <code>-2 4 0</code> —
+<code>true true true true</code>. Значения идут в порядке четырёх
+интервалов из условия. Правая граница проверяется также с разделителями
+TAB и LF: <code>-2\t4\n4</code>; это те же три числа.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Main.java" ace-mode="ace/mode/java" normalize-to-ascii="false">/**
+ * Принадлежность числа интервалам с разными границами.
+ * Условия ввода и формат вывода приведены в условии задания.
+ * Алгоритм и вспомогательные методы разработайте самостоятельно.
+ */
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // TODO: прочитайте n, m и k и выведите четыре результата в порядке из условия.
+    }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

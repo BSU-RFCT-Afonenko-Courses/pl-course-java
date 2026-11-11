@@ -1,0 +1,133 @@
+{
+  "uuid": "0b6190e8-3dee-5e71-a07a-a126171cec91",
+  "type": "Homework",
+  "title": "Обобщённые алгоритмы и контейнеры",
+  "set": "Homework",
+  "number": "7",
+  "maxPoints": 50,
+  "text": "<p>В этой работе нужно сохранить общий ход алгоритма при смене типа\nэлементов. Поиск максимума получает сравнение из границы параметра,\nподсчёт — проверку свойства через переданный объект. Очередь или стек\nсогласуют тип помещаемого значения и результата извлечения и сохраняют\nсвой порядок извлечения.</p>\n<p>При чтении каждого условия отделите связь типов от предпосылок о\nданных: допустимость диапазона, ненулевые элементы и наличие свободного\nместа не следуют из параметра <code>T</code>. Предпосылки, для которых\nусловие освобождает от программной проверки, остаются условиями\nвызова.</p>\n<p>Перед началом прочитайте <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/type-parameters.html#sec-t-type-parameters\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 15</a>. Поиск максимума\nнепустого списка и передача арифметики в <code>dot</code> дают основу\nдля двух самостоятельных алгоритмов. Для контейнера нужны также\nограничения создания <code>new T[n]</code> из <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/type-relations.html#sec-t-type-relations-runtime-limits\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Ограничения выполняемого\nпредставления</a>, условия переданного массива из <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/generic-classes.html#sec-h-generic-classes-array\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Массив как хранилище</a> и\nкороткий разбор <code>throw</code>, <code>throws</code>,\n<code>try/catch</code> в <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/exceptions.html#sec-theory-exceptions-early-checked\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Проверяемый отказ\nоперации</a>.</p>\n<p>Введение к работе — <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/practice/generics.html#/sec-p-generics\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Обобщённые алгоритмы и\nконтейнеры</a>. Формы объявлений можно посмотреть в <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/generic-classes.html#sec-h-generic-classes\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 11</a> и <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/generic-methods.html#sec-h-generic-methods\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 12</a>.</p>\n<h2\nid=\"pl-6befb6ef-aaae-510a-b9f8-f4fc59c9e08e-представление-решения\">Представление\nрешения</h2>\n<p>Представьте исходные Java-файлы и продемонстрируйте случаи из\nусловий. Для метода проследите тип элемента от входа до результата или\nпереданной проверки. Для контейнера покажите порядок извлечения до\nотказа и после него, а также повторное использование освобождённого\nместа.</p>\n<p>Объясните, какие операции доступны общему телу благодаря границе или\nинтерфейсу. Укажите, какие предпосылки относятся к данным и почему\nисходное содержимое переданного массива не означает заполненность нового\nконтейнера.</p>\n<p>Устройство программы выбирайте самостоятельно в пределах условий\nзаданий. Для запуска используется JDK 25. Отдельный большой отчёт не\nтребуется.</p>\n<h2 id=\"pl-6befb6ef-aaae-510a-b9f8-f4fc59c9e08e-условия-задач\">Условия\nзадач</h2>\n<p>Полные условия и общие правила находятся в темах банка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/generics.html#sec-bank-generics\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Обобщённые типы</a>, <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/exceptions.html#sec-bank-exceptions\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Исключения</a>.</p>\n<div\nid=\"pl-6befb6ef-aaae-510a-b9f8-f4fc59c9e08e-3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9\"\nclass=\"hidden\">\n\n</div>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Обобщённые алгоритмы и контейнеры",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-generics-range-maximum",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-generics-property-count",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Выполните одну из задач",
+      "bestQuestions": 1,
+      "questions": [
+        {
+          "id": "java-semester-one/exr-generics-generic-queue",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-generics-generic-stack",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Обобщённые алгоритмы и контейнеры",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-generics-generic-interface",
+          "autoPoints": 0,
+          "manualPoints": 10,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-generics-generic-dynamic-queue",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Добровольные задания",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-generics-generic-circular-queue",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-exceptions-queue-exceptions",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-exceptions-stack-exceptions",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        }
+      ]
+    }
+  ]
+}

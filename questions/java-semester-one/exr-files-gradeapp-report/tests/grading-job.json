@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "sourceFiles": [
+    "grade/DataFormatException.java",
+    "grade/Main.java",
+    "grade/Reports.java",
+    "grade/Student.java",
+    "grade/StudentFiles.java",
+    "grade/StudentParser.java"
+  ],
+  "testFiles": [
+    "src/api/java/ApiContract.java",
+    "src/api/java/org/prairielearn/api/PlatformApiPrecheck.java",
+    "src/test/java/coursesupport/JavaProcess.java",
+    "src/test/java/grade/GradeAppBoundaryTest.java",
+    "src/test/java/grade/GradeAppContractTest.java",
+    "src/test/java/grade/GradeAppEmptyContractTest.java",
+    "src/test/java/PublicChecks.java",
+    "src/test/java/PublicExamplesTest.java",
+    "src/test/java/TaskBinding.java"
+  ],
+  "mode": "implementation",
+  "runtime": "java25-gradle-junit-v1",
+  "java": {
+    "release": 25,
+    "encoding": "UTF-8",
+    "compiler-options": [
+      "-proc:none",
+      "-Xmaxerrs",
+      "5"
+    ]
+  },
+  "limits": {
+    "outer-seconds": 300,
+    "compile-seconds": 120,
+    "run-seconds": 30,
+    "networking": false,
+    "max-output-bytes": 65536
+  },
+  "scoring": {
+    "mode": "weighted"
+  },
+  "discovery": {
+    "min-executed": 1,
+    "allow-skipped": false
+  },
+  "additionalJavaSources": {
+    "archive": "solution.zip",
+    "maxFiles": 128,
+    "maxFileBytes": 1048576,
+    "maxTotalBytes": 4194304,
+    "maxArchiveBytes": 2097152,
+    "primaryRequired": true,
+    "allowAdditional": false
+  },
+  "javaBuild": {
+    "kind": "gradle-jar-v1",
+    "mainClass": "grade.Main",
+    "artifact": "gradeapp.jar"
+  },
+  "apiPrecheck": {
+    "files": [
+      "src/api/java/ApiContract.java",
+      "src/api/java/org/prairielearn/api/PlatformApiPrecheck.java"
+    ],
+    "entry": "ApiContract"
+  }
+}

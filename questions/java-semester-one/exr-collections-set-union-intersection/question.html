@@ -1,0 +1,60 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Начальный</p>
+<p>Напишите отдельные методы пересечения и объединения двух множеств
+<code>Integer</code>. Входные множества и их элементы отличны от
+<code>null</code>; пустое множество допустимо. Каждый результат имеет
+самостоятельный состав; оба входа после вызова сохраняются.</p>
+<p>Объединение содержит все различные элементы обоих входов, пересечение
+— только общие. Для <code>{1, 2}</code> и <code>{2, 3}</code> результаты
+равны <code>{1, 2, 3}</code> и <code>{2}</code>. Сравнивайте состав
+через равенство множеств: порядок перечисления не задан. Допустимы
+изменяемая копия с <code>addAll</code>/<code>retainAll</code> и явный
+обход с <code>contains</code>/<code>add</code>. Поддержка последующего
+изменения результата не требуется.</p>
+<p>Предъявите исходники и консольную демонстрацию обычного случая,
+одинаковых, пустых и непересекающихся множеств. После каждого метода
+покажите сохранность обоих входов. Объясните, почему состав результата
+независим от входов. Имена вспомогательных методов и классов и способ
+запуска свободны в пределах файлов для сдачи. Справка: <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/handbook/sets-maps.html#sec-api-sets-maps-set"
+target="_blank" rel="noopener noreferrer">Множества</a> и <a
+href="https://bsu-rfct-afonenko-courses.github.io/Java/handbook/sets-maps.html#sec-api-sets-maps-bulk"
+target="_blank" rel="noopener noreferrer">Групповые операции
+множеств</a>.</p>
+<h4
+id="pl-866da133-e8f0-5115-96e2-bf668e61e01b-вход-для-проверки-1">Вход
+для проверки</h4>
+<p>Два входа стартера возвращают объединение и пересечение. Переданные
+множества сохраняются; последующее изменение их состава не меняет уже
+полученный результат. Сравнивается состав множеств, без требования
+порядка или изменяемости результата. Сигнатуры входа из стартера
+обязательны.</p>
+<section class="public-tests">
+<h3>Открытые примеры</h3>
+<p><strong>Общий элемент.</strong> Для <code>A = {1, 2}</code> и
+<code>B = {2, 3}</code> объединение равно <code>{1, 2, 3}</code>,
+пересечение — <code>{2}</code>. Оба входных множества сохраняются.</p>
+<p><strong>Пустой вход и независимые результаты.</strong> Для
+<code>A = {}</code> и <code>B = {4}</code> объединение равно
+<code>{4}</code>, пересечение пусто. После обоих вызовов исходные
+множества прежние. Последующее добавление <code>5</code> в
+<code>B</code> не меняет ранее полученные результаты.</p>
+</section>
+<p>Сдайте <code>Study.java</code> без объявления пакета, сохранив
+объявления входа из стартера.</p>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+<pl-file-editor file-name="Study.java" ace-mode="ace/mode/java" normalize-to-ascii="false">import java.util.*;
+/** Входы к вашему решению. Реализуйте модель и алгоритм по условию.
+ * Вспомогательные типы, видимость и наследование допустимы внутри фиксированного комплекта; сохраняйте заданные пути и package. Не заменяйте
+ * настоящую модель отдельным снимком и не скрывайте мутацию копированием во входе.
+ * Законные копии, вычисляемые самим алгоритмом по условию, разрешены. */
+public class Study {
+    /** TODO: Два входа стартера возвращают объединение и пересечение. */
+    public static Set&lt;Integer&gt; union(Set&lt;Integer&gt; first, Set&lt;Integer&gt; second) { throw new UnsupportedOperationException(&quot;TODO: реализуйте решение&quot;); }
+    /** TODO: Два входа стартера возвращают объединение и пересечение. */
+    public static Set&lt;Integer&gt; intersection(Set&lt;Integer&gt; first, Set&lt;Integer&gt; second) { throw new UnsupportedOperationException(&quot;TODO: реализуйте решение&quot;); }
+}
+</pl-file-editor>
+</pl-question-panel>
+<pl-submission-panel><pl-external-grader-results></pl-external-grader-results></pl-submission-panel>

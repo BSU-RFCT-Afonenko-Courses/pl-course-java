@@ -1,0 +1,140 @@
+{
+  "uuid": "96d3bc2e-4f28-56c6-a087-6b822f22cfe1",
+  "type": "Homework",
+  "title": "Массивы и изменения данных",
+  "set": "Homework",
+  "number": "3",
+  "maxPoints": 60,
+  "text": "<p>Различите порядок чтения, запись в существующий массив и создание\nнового результата. Для матрицы важно отдельно учитывать внешний массив и\nстроки.</p>\n<p>Теория: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/arrays.html#sec-theory-arrays\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 8</a> и <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/theory/methods.html#sec-theory-methods-reference-copy\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Копирование ссылки и общий\nобъект</a>. Справочник: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/handbook/arrays.html#sec-api-arrays\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Глава 6</a>. Введение к\nработе: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/practice/arrays.html#/sec-practice-arrays\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Массивы и изменения\nданных</a>.</p>\n<p>Обратный вывод сохраняет входной массив. Вычитание среднего создаёт\nновый <code>double[][]</code>, оставляя исходные числа прежними.\nСортировка переставляет целые строки и сохраняет порядок строк с равным\nключом.</p>\n<p>Алгоритм сортировки и вспомогательные методы выберите самостоятельно.\nУстойчивость проверяется по сохранению взаимного порядка строк с равными\nключами. Правило сравнения можно выразить обычными условными операторами\nлибо передать библиотечной сортировке через <code>Comparator</code>.</p>\n<h2\nid=\"pl-bc6fa714-bc61-5f4d-b571-6f70d8d73daa-представление-решения\">Представление\nрешения</h2>\n<p>Представьте исходники, команды и выбранные входы. Для обратного\nвывода нужны пустой и одноэлементный массивы; для среднего — строка с\nдробным средним; для сортировки — разные строки с равной суммой.\nПокажите исходные данные после операции там, где требуется их сохранить.\nОбъясните по схеме ссылок, почему одного <code>matrix.clone()</code>\nнедостаточно для независимого изменения чисел в строках.</p>\n<p>При вычислении среднего учитывайте тип результата, а при перемещении\nэлементов — сохранение требуемого порядка.</p>\n<h2 id=\"pl-bc6fa714-bc61-5f4d-b571-6f70d8d73daa-условия-задач\">Условия\nзадач</h2>\n<p>Полные условия и общие правила находятся в темах банка: <a\nhref=\"https://bsu-rfct-afonenko-courses.github.io/Java/tasks/bank/arrays.html#sec-bank-arrays\"\ntarget=\"_blank\" rel=\"noopener noreferrer\">Массивы</a>.</p>\n<div\nid=\"pl-bc6fa714-bc61-5f4d-b571-6f70d8d73daa-3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9\"\nclass=\"hidden\">\n\n</div>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Массивы и изменения данных",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-arrays-reverse-array",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-arrays-subtract-array-average",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-arrays-sort-matrix-rows",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-arrays-array-average",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-arrays-move-row-zeros",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-arrays-sort-array",
+          "autoPoints": 8,
+          "manualPoints": 2,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Добровольные задания",
+      "questions": [
+        {
+          "id": "java-semester-one/exr-arrays-cyclic-matrix-shift",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-arrays-rotate-matrix",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-arrays-remove-max-rows-columns",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-arrays-saddle-points",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        },
+        {
+          "id": "java-semester-one/exr-arrays-matrix-local-minima",
+          "autoPoints": 0,
+          "manualPoints": 0,
+          "triesPerVariant": 3,
+          "preferences": {
+            "courseRequirement": "optional"
+          }
+        }
+      ]
+    }
+  ]
+}
